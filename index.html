@@ -67,14 +67,32 @@
       font-family: 'Poppins', sans-serif;
       background-color: var(--dourado-humanizado);
     }
-    /* Efeito de transição suave para o SPA */
-    #conteudo-dinamico {
-      opacity: 1;
-      transition: opacity 0.3s ease;
-    }
-    #conteudo-dinamico.carregando {
-      opacity: 0.5;
-    }
+    /* Transições de página */
+.page-transition #dynamic-content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+body.page-transition {
+  overflow-x: hidden;
+}
+
+/* Barra de progresso personalizada */
+#nprogress .bar {
+  background: #C9A44C !important;
+  height: 3px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #C9A44C, 0 0 5px #C9A44C !important;
+}
+
+/* Layout básico */
+#dynamic-content {
+  min-height: 60vh;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
 
     .nav-link {
         transition: color 0.3s ease;
@@ -163,7 +181,24 @@
   .card:hover .icon-wrapper i {
     color: white !important;
   }
-  
+/* PAGINA 404 */
+
+  .error-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background-color: #FAFAFA;
+  }
+
+  @media (max-width: 992px) {
+    .error-page {
+      text-align: center;
+    }
+
+    .error-page .d-flex {
+      justify-content: center !important;
+    }
+  }
  </style>
   
   <!-- JavaScript (SPA + Animações) -->
@@ -171,6 +206,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js" defer></script>
+
   
   <!-- Pré-carregamento de Imagens Chave -->
   <link rel="preload" href="/assets/img/hero-acolhimento.jpg" as="image" media="(min-width: 768px)">
@@ -208,34 +244,28 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <!-- Link Ativo -->
         <li class="nav-item">
-          <a class="nav-link active" href="/inicio" onclick="navigate('/inicio'); return false;">
+          <a class="nav-link active" href="/" onclick="navigate('/');">
             <i class="bi bi-house-door me-1"></i> Início
           </a>
         </li>
         
         <!-- Menu Suspenso "Sobre" -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="sobre.html">
             <i class="bi bi-heart-pulse me-1"></i> Sobre Nós
           </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/missao" onclick="navigate('/missao'); return false;">Missão e Valores</a></li>
-            <li><a class="dropdown-item" href="/equipe" onclick="navigate('/equipe'); return false;">Nossa Equipe</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/diferenciais" onclick="navigate('/diferenciais'); return false;">O Que Nos Diferencia</a></li>
-          </ul>
         </li>
 
         <!-- Serviços -->
         <li class="nav-item">
-          <a class="nav-link" href="/servicos" onclick="navigate('/servicos'); return false;">
+          <a class="nav-link" href="servicos.html">
             <i class="bi bi-people me-1"></i> Serviços
           </a>
         </li>
 
         <!-- Contato -->
         <li class="nav-item">
-          <a class="nav-link" href="/contato" onclick="navigate('/contato'); return false;">
+          <a class="nav-link" href="contato.html">
             <i class="bi bi-envelope me-1"></i> Contato
           </a>
         </li>
@@ -243,7 +273,7 @@
 
       <!-- Botão de Ação (Agendamento) -->
       <div class="ms-lg-3 mt-3 mt-lg-0">
-        <a href="/agendamento" class="btn btn-warning rounded-pill px-4 py-2 fw-bold" onclick="navigate('/agendamento'); return false;" style="background-color: #C9A44C; border: none;">
+        <a href="agendamento.html" class="btn btn-warning rounded-pill px-4 py-2 fw-bold" style="background-color: #C9A44C; border: none;">
           <i class="bi bi-calendar-check me-2"></i> Agende uma Conversa
         </a>
       </div>
@@ -253,7 +283,7 @@
 </header>
 
 
-<main>
+<main id="main">
 
 <!-- Hero Section (Simplificada) -->
 <section class="hero-section" style="
@@ -274,8 +304,7 @@
           <span class="text-warning fw-semibold">Sem julgamentos. Sem pressa. Com dignidade.</span>
         </p>
         <div class="d-flex gap-3">
-          <a href="/agendamento" onclick="navigate('/agendamento'); return false;" 
-             class="btn btn-warning btn-lg px-4 py-3 fw-bold">
+          <a href="agendamento.html" class="btn btn-warning btn-lg px-4 py-3 fw-bold">
             <i class="bi bi-calendar-check-fill me-2"></i> Agendar Consulta
           </a>
         </div>
@@ -543,7 +572,7 @@
               </div>
               <h4 class="mb-3">Reencontra-te</h4>
               <p class="text-muted mb-4">Autoestima e identidade com propósito.</p>
-              <a href="/servicos#individual" onclick="navigate('/servicos#individual'); return false;" class="btn btn-sm btn-outline-warning">Detalhes</a>
+              <a href="servicos.html#reencontrate" class="btn btn-sm btn-outline-warning">Detalhes</a>
             </div>
           </div>
         </div>
@@ -557,7 +586,7 @@
               </div>
               <h4 class="mb-3">Pequenos Gigantes</h4>
               <p class="text-muted mb-4">Terapia infantil, adaptada à realidade angolana.</p>
-              <a href="/servicos#criancas" onclick="navigate('/servicos#criancas'); return false;" class="btn btn-sm btn-outline-warning">Detalhes</a>
+              <a href="servicos.html#criancas" class="btn btn-sm btn-outline-warning">Detalhes</a>
             </div>
           </div>
         </div>
@@ -571,7 +600,7 @@
               </div>
               <h4 class="mb-3">Fala que transforma</h4>
               <p class="text-muted mb-4">Comunicação empática e eficaz.</p>
-              <a href="/servicos#oratoria" onclick="navigate('/servicos#oratoria'); return false;" class="btn btn-sm btn-outline-warning">Detalhes</a>
+              <a href="servicos.html#falaquetransforma" onclick="navigate('/servicos#oratoria'); return false;" class="btn btn-sm btn-outline-warning">Detalhes</a>
             </div>
           </div>
         </div>
@@ -585,7 +614,7 @@
               </div>
               <h4 class="mb-3">Limites que libertam</h4>
               <p class="text-muted mb-4">Assertividade com respeito e clareza.</p>
-              <a href="/servicos#vocacao" onclick="navigate('/servicos#vocacao'); return false;" class="btn btn-sm btn-outline-warning">Detalhes</a>
+              <a href="servicos.html#limitesquelibertam" class="btn btn-sm btn-outline-warning">Detalhes</a>
             </div>
           </div>
         </div>
@@ -599,7 +628,7 @@
               </div>
               <h4 class="mb-3">Presença que cura</h4>
               <p class="text-muted mb-4">Escuta ativa e diálogo consistente.</p>
-              <a href="/servicos#lideranca" onclick="navigate('/servicos#lideranca'); return false;" class="btn btn-sm btn-outline-warning">Detalhes</a>
+              <a href="servicos.html#escutaativa" class="btn btn-sm btn-outline-warning">Detalhes</a>
             </div>
           </div>
         </div>
@@ -608,7 +637,7 @@
     </div>
 
     <div class="text-center mt-4" data-aos="fade-up">
-      <a href="/servicos" onclick="navigate('/servicos'); return false;" class="btn btn-warning px-4">
+      <a href="servicos.html" class="btn btn-warning px-4">
         <i class="bi bi-list-ul me-2"></i> Ver Todos os Serviços
       </a>
     </div>
@@ -623,10 +652,10 @@
         <h2 class="display-5 fw-bold mb-4">Pronto para dar o primeiro passo?</h2>
         <p class="lead mb-5">Sua jornada de transformação emocional começa com uma simples conversa.</p>
         <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-          <a href="/agendamento" onclick="navigate('/agendamento'); return false;" class="btn btn-warning btn-lg px-4 py-3 fw-bold">
+          <a href="agendamento.html" class="btn btn-warning btn-lg px-4 py-3 fw-bold">
             <i class="bi bi-calendar-check me-2"></i> Agendar Consulta
           </a>
-          <a href="/contato" onclick="navigate('/contato'); return false;" class="btn btn-outline-dark btn-lg px-4 py-3 fw-bold">
+          <a href="contato.html" class="btn btn-outline-dark btn-lg px-4 py-3 fw-bold">
             <i class="bi bi-telephone me-2"></i> Falar com Nossa Equipe
           </a>
         </div>
@@ -724,8 +753,7 @@
           <p class="lead text-dark mb-4" style="color: #1A2B2F !important;">
             Nós podemos ajudar você. Agende uma sessão de terapia agora mesmo.
           </p>
-          <a href="/agendamento" 
-             onclick="navigate('/agendamento'); return false;" 
+          <a href="agendamento.html" 
              class="btn btn-lg rounded-pill px-5 py-3 fw-bold shadow" 
              style="background-color: #C9A44C; color: #1A2B2F;">
             <i class="bi bi-calendar-check-fill me-2"></i> Agendar Sessão
@@ -750,10 +778,10 @@
       <div class="col-md-2 mb-4">
         <h5 class="text-warning mb-4">Navegação</h5>
         <ul class="list-unstyled">
-          <li class="mb-2"><a href="/inicio" onclick="navigate('/inicio'); return false;" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Início</a></li>
-          <li class="mb-2"><a href="/servicos" onclick="navigate('/servicos'); return false;" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Serviços</a></li>
-          <li class="mb-2"><a href="/equipe" onclick="navigate('/equipe'); return false;" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Nossa Equipe</a></li>
-          <li class="mb-2"><a href="/contato" onclick="navigate('/contato'); return false;" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Contato</a></li>
+          <li class="mb-2"><a href="/" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Início</a></li>
+          <li class="mb-2"><a href="servicos.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Serviços</a></li>
+          <li class="mb-2"><a href="sobre.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Sobre Nós</a></li>
+          <li class="mb-2"><a href="contato.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Contato</a></li>
         </ul>
       </div>
 
@@ -799,6 +827,5 @@
     </div>
   </div>
 </footer>
-
 
 </body></html>
