@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados Essenciais -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Primário -->
+  <title>Vida Promovida | Saúde Emocional com Acolhimento e Dignidade</title>
+  <meta name="description" content="Espaço seguro para cuidado emocional em Angola. Oferecemos escuta ativa, terapias e workshops para transformação interior. Sua dor merece ser acolhida.">
+  <meta name="keywords" content="saúde mental Angola, terapia Luanda, acolhimento emocional, cuidado psicológico, workshops autoconhecimento">
+  <meta name="author" content="Vida PromoVIDA">
+  
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:title" content="Vida PromoVIDA | Reconstruindo Dignidade Emocional">
+  <meta property="og:description" content="Na dor ou no crescimento, seu coração encontra amparo. Cuidado emocional humanizado em Angola.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vidapromovida.github.io/vida-promovida">
+  <meta property="og:image" content="https://vidapromovida.github.io/vida-promovida/assets/img/social-share.jpg">
+  <meta property="og:image:alt" content="Terapeuta e paciente em ambiente acolhedor, trocando um abraço">
+  <meta property="og:site_name" content="Vida PromoVIDA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image:alt" content="Cuidado emocional que transforma vidas">
+  
+  <!-- Favicon (Cores Terapêuticas) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#1a2b2f">
+  <meta name="msapplication-TileColor" content="#1a2b2f">
+  <meta name="theme-color" content="#f8f9fa">
+  
+  <!-- Pré-carregamento Crítico -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Poppins:wght@500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Poppins:wght@500;600&display=swap">
+  </noscript>
+  
+  <!-- CSS (Bootstrap + AOS + Ícones) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- CSS Inline (Identidade Visual) -->
+  <style>
+    :root {
+      --azul-terapeutico: #1A2B2F;  /* Estabilidade */
+      --dourado-humanizado: #C9A44C; /* Calor */
+      --branco-acolhedor: #FAFAFA;  /* Pureza */
+      --verde-renovacao: #88A47C;   /* Esperança */
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+      color: var(--azul-terapeutico);
+      background-color: var(--branco-acolhedor);
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--azul-terapeutico);
+    }
+    .btn-cta {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--dourado-humanizado);
+    }
+  
+
+    .nav-link {
+        transition: color 0.3s ease;
+        position: relative;
+    }
+
+    .nav-link:hover {
+        color: #C9A44C !important;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #C9A44C;
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  .social-icon:hover {
+    background-color: #C9A44C !important;
+    border-color: #C9A44C !important;
+    color: #1A2B2F !important;
+  }
+
+
+  .trust-bar {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .trust-bar {
+      margin-top: 0 !important;
+      border-radius: 0 !important;
+    }
+  }
+
+  /* Efeito hover sutil */
+  .trust-bar .bg-white {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .trust-bar .bg-white:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1) !important;
+  }
+    .hover-effect:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+
+  .services-swiper {
+    padding-bottom: 40px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: #C9A44C !important;
+  }
+
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover .icon-wrapper {
+    background-color: #C9A44C !important;
+  }
+
+  .card:hover .icon-wrapper i {
+    color: white !important;
+  }
+
+ </style>
+  
+  <!-- JavaScript (SPA + Animações) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js" defer></script>
+
+  
+  <!-- Pré-carregamento de Imagens Chave -->
+  <link rel="preload" href="/assets/img/hero-acolhimento.jpg" as="image" media="(min-width: 768px)">
+  <link rel="preload" href="/assets/icons/flor-icone.svg" as="image">
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3" data-bs-theme="light">
+  <div class="container">
+    <!-- Logo + Nome -->
+    <a class="navbar-brand d-flex align-items-center" href="/inicio" onclick="navigate('/inicio'); return false;">
+      <img src="assets/img/logo-vida-promovida.png" alt="Logo Vida Promovida - Mãos acolhendo uma flor" width="40" height="40" class="d-inline-block align-top me-2">
+      <span class="fs-4 fw-bold" style="color: #1A2B2F;">Vida Promovida</span>
+    </a>
+
+    <!-- Botão Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Itens de Navegação -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <!-- Link Ativo -->
+        <li class="nav-item">
+          <a class="nav-link active" href="/" onclick="navigate('/');">
+            <i class="bi bi-house-door me-1"></i> Início
+          </a>
+        </li>
+        
+        <!-- Menu Suspenso "Sobre" -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="sobre.html">
+            <i class="bi bi-heart-pulse me-1"></i> Sobre Nós
+          </a>
+        </li>
+
+        <!-- Serviços -->
+        <li class="nav-item">
+          <a class="nav-link" href="servicos.html">
+            <i class="bi bi-people me-1"></i> Serviços
+          </a>
+        </li>
+
+        <!-- Contato -->
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">
+            <i class="bi bi-envelope me-1"></i> Contato
+          </a>
+        </li>
+      </ul>
+
+      <!-- Botão de Ação (Agendamento) -->
+      <div class="ms-lg-3 mt-3 mt-lg-0">
+        <a href="agendamento.html" class="btn btn-warning rounded-pill px-4 py-2 fw-bold" style="background-color: #C9A44C; border: none;">
+          <i class="bi bi-calendar-check me-2"></i> Agende uma Conversa
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+
+
+<main id="main">
+
+<!-- Hero Section (Simplificada) -->
+<section class="hero-section" style="
+  background: linear-gradient(rgba(26, 43, 47, 0.9), rgba(26, 43, 47, 0.9)), 
+              url('assets/img/hero-ilustration.jpg') center/cover;
+  min-height: 60vh;
+  position: relative;
+  padding: 20vh 0;
+">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 text-white">
+        <h1 class="display-4 fw-bold mb-4">
+          <span class="text-warning">Sua saúde emocional importa</span>
+        </h1>
+        <p class="lead mb-5" style="font-size: 1.25rem;">
+          Acolhimento psicológico humanizado em Luanda.<br>
+          <span class="text-warning fw-semibold">Sem julgamentos. Sem pressa. Com dignidade.</span>
+        </p>
+        <div class="d-flex gap-3">
+          <a href="agendamento.html" class="btn btn-warning btn-lg px-4 py-3 fw-bold">
+            <i class="bi bi-calendar-check-fill me-2"></i> Agendar Consulta
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Barra de Destaque com AOS -->
+<div class="trust-bar py-4 bg-light" 
+     style="position: relative; z-index: 10; margin-top: -3rem; border-radius: 0.5rem; box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <!-- Destaque 1 -->
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-3 bg-white rounded-3 h-100 shadow-sm">
+          <i class="bi bi-people-fill text-warning fs-1 mb-2"></i>
+          <h3 class="counter mb-0" data-target="67">0</h3>
+          <p class="text-muted mb-0">Pacientes Atendidos</p>
+        </div>
+      </div>
+      
+      <!-- Destaque 2 -->
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-3 bg-white rounded-3 h-100 shadow-sm">
+          <i class="bi bi-award-fill text-warning fs-1 mb-2"></i>
+          <h3 class="counter mb-0" data-target="2">0</h3>
+          <p class="text-muted mb-0">Anos de Experiência</p>
+        </div>
+      </div>
+      
+      <!-- Destaque 3 -->
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="p-3 bg-white rounded-3 h-100 shadow-sm">
+          <i class="bi bi-emoji-smile-fill text-warning fs-1 mb-2"></i>
+          <h3 class="counter mb-0" data-target="84">0</h3>
+          <p class="text-muted mb-0">% de Satisfação</p>
+        </div>
+      </div>
+      
+      <!-- Destaque 4 -->
+      <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="p-3 bg-white rounded-3 h-100 shadow-sm">
+          <i class="bi bi-heart-fill text-warning fs-1 mb-2"></i>
+          <h3 class="counter mb-0" data-target="100">0</h3>
+          <p class="text-muted mb-0">Acolhimento Garantido</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Seção: Por Que Nos Escolher -->
+<section class="py-5 bg-light">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Por Que a <span class="text-warning">Vida Promovida</span>?</h2>
+      <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">4 pilares do nosso cuidado emocional</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 border-0 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 80px; height: 80px;">
+              <i class="bi bi-globe-americas text-warning fs-3"></i>
+            </div>
+            <h4 class="mb-3">Contexto Cultural</h4>
+            <p class="text-muted">Terapeutas angolanos que compreendem profundamente as nuances culturais e sociais locais.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 border-0 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 80px; height: 80px;">
+              <i class="bi bi-heart-pulse text-warning fs-3"></i>
+            </div>
+            <h4 class="mb-3">Abordagem Integral</h4>
+            <p class="text-muted">Cuidamos da mente, emoções e relações sociais num processo transformador completo.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card h-100 border-0 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 80px; height: 80px;">
+              <i class="bi bi-shield-lock text-warning fs-3"></i>
+            </div>
+            <h4 class="mb-3">Sigilo Absoluto</h4>
+            <p class="text-muted">Seu processo é protegido com confidencialidade total e ética profissional.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 border-0 shadow-sm hover-effect">
+          <div class="card-body p-4 text-center">
+            <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 80px; height: 80px;">
+              <i class="bi bi-cash-coin text-warning fs-3"></i>
+            </div>
+            <h4 class="mb-3">Acessibilidade</h4>
+            <p class="text-muted">Valores justos e planos flexíveis para que o cuidado emocional não seja privilégio.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- Seção: Depoimentos -->
+<section class="py-5 bg-white">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Vozes de <span class="text-warning">Transformação</span></h2>
+      <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">O que dizem quem já passou por aqui</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Depoimento 1 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="mb-3 text-warning">
+              <i class="bi bi-quote fs-1"></i>
+            </div>
+            <p class="fst-italic mb-4">"Depois de 3 meses de terapia, consegui superar a ansiedade que me impedia de trabalhar. A equipe da Vida Promovida me devolveu a esperança."</p>
+            <div class="d-flex align-items-center">
+              <div class="ms-3">
+                <h6 class="mb-0">Adriano Kiala</h6>
+                <small class="text-muted">Empresário, 42 anos</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 2 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="mb-3 text-warning">
+              <i class="bi bi-quote fs-1"></i>
+            </div>
+            <p class="fst-italic mb-4">"Como mãe solteira, não imaginava que poderia lidar melhor com o stress. As sessões foram um divisor de águas na minha relação com minha filha."</p>
+            <div class="d-flex align-items-center">
+              <div class="ms-3">
+                <h6 class="mb-0">Tânia dos Santos</h6>
+                <small class="text-muted">Enfermeira, 35 anos</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 3 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="mb-3 text-warning">
+              <i class="bi bi-quote fs-1"></i>
+            </div>
+            <p class="fst-italic mb-4">"A abordagem cultural foi essencial - finalmente me senti compreendido em minhas raízes e desafios como jovem angolano."</p>
+            <div class="d-flex align-items-center">
+              <div class="ms-3">
+                <h6 class="mb-0">Emanuel Capamba</h6>
+                <small class="text-muted">Estudante, 19 anos</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 4 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="mb-3 text-warning">
+              <i class="bi bi-quote fs-1"></i>
+            </div>
+            <p class="fst-italic mb-4">"O treinamento de inteligência emocional mudou minha forma de liderar minha equipe. Resultados visíveis em semanas!"</p>
+            <div class="d-flex align-items-center">
+              <div class="ms-3">
+                <h6 class="mb-0">Carlota Ventura</h6>
+                <small class="text-muted">Gerente, 47 anos</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 5 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="mb-3 text-warning">
+              <i class="bi bi-quote fs-1"></i>
+            </div>
+            <p class="fst-italic mb-4">"Meu filho de 8 anos voltou a sorrir depois de apenas duas sessões de terapia'. Gratidão à equipe pelo cuidado especializado."</p>
+            <div class="d-flex align-items-center">
+              <div class="ms-3">
+                <h6 class="mb-0">Simão Quinda</h6>
+                <small class="text-muted">Pai, 38 anos</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 6 -->
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <div class="mb-3 text-warning">
+              <i class="bi bi-quote fs-1"></i>
+            </div>
+            <p class="fst-italic mb-4">"Perdi meu irmão e não sabia como lidar com o luto. A terapia me deu ferramentas para honrar sua memória sem sofrimento."</p>
+            <div class="d-flex align-items-center">
+              <div class="ms-3">
+                <h6 class="mb-0">Luísa Tchissola</h6>
+                <small class="text-muted">Professora, 29 anos</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Seção: Serviços em Destaque -->
+<section class="py-5 bg-light">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold mb-3" data-aos="fade-up">Nossos <span class="text-warning">Serviços</span></h2>
+      <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">Caminhos para seu desenvolvimento</p>
+    </div>
+
+    <div class="swiper services-swiper pb-5" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        <!-- Serviço 1 -->
+        <div class="swiper-slide">
+          <div class="card border-0 h-100 shadow-sm">
+            <div class="card-body p-4 text-center">
+              <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 70px; height: 70px;">
+                <i class="bi bi-person-lines-fill text-warning fs-3"></i>
+              </div>
+              <h4 class="mb-3">Reencontra-te</h4>
+              <p class="text-muted mb-4">Autoestima e identidade com propósito.</p>
+              <a href="servicos.html#reencontrate" class="btn btn-sm btn-outline-warning">Detalhes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 2 -->
+        <div class="swiper-slide">
+          <div class="card border-0 h-100 shadow-sm">
+            <div class="card-body p-4 text-center">
+              <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 70px; height: 70px;">
+                <i class="bi bi-emoji-smile text-warning fs-3"></i>
+              </div>
+              <h4 class="mb-3">Pequenos Gigantes</h4>
+              <p class="text-muted mb-4">Terapia infantil, adaptada à realidade angolana.</p>
+              <a href="servicos.html#pequenosgigantes" class="btn btn-sm btn-outline-warning">Detalhes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 3 -->
+        <div class="swiper-slide">
+          <div class="card border-0 h-100 shadow-sm">
+            <div class="card-body p-4 text-center">
+              <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 70px; height: 70px;">
+                <i class="bi bi-megaphone text-warning fs-3"></i>
+              </div>
+              <h4 class="mb-3">Fala que transforma</h4>
+              <p class="text-muted mb-4">Comunicação empática e eficaz.</p>
+              <a href="servicos.html#falaquetransforma" onclick="navigate('/servicos#oratoria'); return false;" class="btn btn-sm btn-outline-warning">Detalhes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 4 -->
+        <div class="swiper-slide">
+          <div class="card border-0 h-100 shadow-sm">
+            <div class="card-body p-4 text-center">
+              <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 70px; height: 70px;">
+                <i class="bi bi-lightbulb text-warning fs-3"></i>
+              </div>
+              <h4 class="mb-3">Limites que libertam</h4>
+              <p class="text-muted mb-4">Assertividade com respeito e clareza.</p>
+              <a href="servicos.html#limitesquelibertam" class="btn btn-sm btn-outline-warning">Detalhes</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Serviço 5 -->
+        <div class="swiper-slide">
+          <div class="card border-0 h-100 shadow-sm">
+            <div class="card-body p-4 text-center">
+              <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 70px; height: 70px;">
+                <i class="bi bi-people text-warning fs-3"></i>
+              </div>
+              <h4 class="mb-3">Presença que cura</h4>
+              <p class="text-muted mb-4">Escuta ativa e diálogo consistente.</p>
+              <a href="servicos.html#presencaquecura" class="btn btn-sm btn-outline-warning">Detalhes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="text-center mt-4" data-aos="fade-up">
+      <a href="servicos.html" class="btn btn-warning px-4">
+        <i class="bi bi-list-ul me-2"></i> Ver Todos os Serviços
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Final -->
+<section class="py-5 bg-warning bg-opacity-10">
+  <div class="container py-5 text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="zoom-in">
+        <h2 class="display-5 fw-bold mb-4">Pronto para dar o primeiro passo?</h2>
+        <p class="lead mb-5">Sua jornada de transformação emocional começa com uma simples conversa.</p>
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+          <a href="agendamento.html" class="btn btn-warning btn-lg px-4 py-3 fw-bold">
+            <i class="bi bi-calendar-check me-2"></i> Agendar Consulta
+          </a>
+          <a href="contato.html" class="btn btn-outline-dark btn-lg px-4 py-3 fw-bold">
+            <i class="bi bi-telephone me-2"></i> Falar com Nossa Equipe
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inicialização do Swiper -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Configuração do Swiper
+    const swiper = new Swiper('.services-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+      }
+    });
+  
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true // Animação ocorre apenas uma vez
+    });
+
+    // Animação dos contadores
+    const startCounters = () => {
+      const counters = document.querySelectorAll('.counter');
+      const speed = 200;
+      
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = target / speed;
+          
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 10);
+          } else {
+            counter.innerText = target + (counter.getAttribute('data-target') === '100' ? '%' : '+');
+          }
+        };
+        
+        // Dispara quando o elemento está visível
+        const observer = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            updateCount();
+            observer.unobserve(counter.parentElement);
+          }
+        }, { threshold: 0.5 });
+        
+        observer.observe(counter.parentElement);
+      });
+    };
+
+    // Chama a função após pequeno delay para garantir que AOS está pronto
+    setTimeout(startCounters, 500);
+  });
+</script>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-dark text-white pt-5 pb-4" style="background-color: #1A2B2F !important;">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Chamada de Ação (CTA) -->
+      <div class="col-md-12 mb-5 text-center">
+        <div class="bg-light p-4 rounded-3 shadow" style="background-color: #FAFAFA !important;">
+          <h3 class="text-dark mb-3" style="color: #1A2B2F !important;">
+            <i class="bi bi-heart-fill text-danger me-2"></i> Não espere mais!
+          </h3>
+          <p class="lead text-dark mb-4" style="color: #1A2B2F !important;">
+            Nós podemos ajudar você. Agende uma sessão de terapia agora mesmo.
+          </p>
+          <a href="agendamento.html" 
+             class="btn btn-lg rounded-pill px-5 py-3 fw-bold shadow" 
+             style="background-color: #C9A44C; color: #1A2B2F;">
+            <i class="bi bi-calendar-check-fill me-2"></i> Agendar Sessão
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna 1: Logo + Slogan -->
+      <div class="col-md-4 mb-4">
+        <img src="assets/img/logo-vida-promovida.png" alt="Vida Promovida" width="60" height="60" class="mb-3">
+        <p class="text-white-50">
+          Cuidado emocional com acolhimento e dignidade em Angola.
+        </p>
+        <div class="mt-4">
+          <a href="#" class="text-white-50 me-3" style="text-decoration: none;">
+            <i class="bi bi-shield-lock-fill me-2"></i> Política de Privacidade
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna 2: Links Rápidos -->
+      <div class="col-md-2 mb-4">
+        <h5 class="text-warning mb-4">Navegação</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="/" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Início</a></li>
+          <li class="mb-2"><a href="servicos.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Serviços</a></li>
+          <li class="mb-2"><a href="sobre.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Sobre Nós</a></li>
+          <li class="mb-2"><a href="contato.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna 3: Contatos -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-warning mb-4">Contacte-nos</h5>
+        <ul class="list-unstyled text-white-50">
+          <li class="mb-3"><i class="bi bi-envelope-fill me-2 text-warning"></i> vidapromovida@gmail.com</li>
+          <li class="mb-3"><i class="bi bi-telephone-fill me-2 text-warning"></i> +244 958 902 309</li>
+          <li class="mb-3"><i class="bi bi-geo-alt-fill me-2 text-warning"></i> Luanda, Angola</li>
+        </ul>
+      </div>
+
+      <!-- Coluna 4: Redes Sociais -->
+      <div class="col-md-3 mb-4">
+        <h5 class="text-warning mb-4">Siga-nos</h5>
+        <div class="d-flex">
+          <a href="https://facebook.com/vidapromovida" target="_blank" class="btn btn-outline-light rounded-circle me-2 social-icon">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://instagram.com/vidapromovida" target="_blank" class="btn btn-outline-light rounded-circle me-2 social-icon">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://wa.me/244958902309" target="_blank" class="btn btn-outline-light rounded-circle me-2 social-icon">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+        
+        <!-- Horário -->
+        <div class="mt-4 text-white-50">
+          <h6 class="text-warning">Horário</h6>
+          <p class="mb-1">Seg-Sex: 8h00 - 18h00</p>
+          <p>Sábado: 9h00 - 13h00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="row pt-3 border-top border-secondary">
+      <div class="col-md-12 text-center text-white-50">
+        <p class="mb-0">&copy; 2025 Vida Promovida. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body></html>
