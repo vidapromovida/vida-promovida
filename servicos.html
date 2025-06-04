@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <!-- SEO Primário -->
-  <title>Vida Promovida | Saúde Emocional com Acolhimento e Dignidade</title>
+  <title>Vida Promovida | Serviços</title>
   <meta name="description" content="Espaço seguro para cuidado emocional em Angola. Oferecemos escuta ativa, terapias e workshops para transformação interior. Sua dor merece ser acolhida.">
   <meta name="keywords" content="saúde mental Angola, terapia Luanda, acolhimento emocional, cuidado psicológico, workshops autoconhecimento">
   <meta name="author" content="Vida PromoVIDA">
@@ -67,126 +67,12 @@
       font-family: 'Poppins', sans-serif;
       background-color: var(--dourado-humanizado);
     }
-    /* Transições de página */
-.page-transition #dynamic-content {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 
-body.page-transition {
-  overflow-x: hidden;
-}
-
-/* Barra de progresso personalizada */
-#nprogress .bar {
-  background: #C9A44C !important;
-  height: 3px !important;
-}
-
-#nprogress .peg {
-  box-shadow: 0 0 10px #C9A44C, 0 0 5px #C9A44C !important;
-}
-
-/* Layout básico */
-#dynamic-content {
-  min-height: 60vh;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-}
-
-    .nav-link {
-        transition: color 0.3s ease;
-        position: relative;
-    }
-
-    .nav-link:hover {
-        color: #C9A44C !important;
-    }
-
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #C9A44C;
-        transition: width 0.3s ease;
-    }
-
-    .nav-link:hover::after {
-        width: 100%;
-    }
-
-  .social-icon {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-  .social-icon:hover {
-    background-color: #C9A44C !important;
-    border-color: #C9A44C !important;
-    color: #1A2B2F !important;
-  }
-
-
-  .trust-bar {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .trust-bar {
-      margin-top: 0 !important;
-      border-radius: 0 !important;
-    }
-  }
-
-  /* Efeito hover sutil */
-  .trust-bar .bg-white {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .trust-bar .bg-white:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1) !important;
-  }
-    .hover-effect:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
-  }
-
-  .services-swiper {
-    padding-bottom: 40px;
-  }
-
-  .swiper-pagination-bullet-active {
-    background-color: #C9A44C !important;
-  }
-
-  .icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-
-  .card:hover .icon-wrapper {
-    background-color: #C9A44C !important;
-  }
-
-  .card:hover .icon-wrapper i {
-    color: white !important;
-  }
-  
   
   
  
   /* Servicos */
-  .sidebar {
+    .sidebar {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -255,31 +141,22 @@ body.page-transition {
   .card:hover {
     transform: translateY(-5px);
   }
+
+  /* Hero section */
+  .services-hero {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
  </style>
   
   <!-- JavaScript (SPA + Animações) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js" defer></script>
 
-  
-  <!-- Pré-carregamento de Imagens Chave -->
-  <link rel="preload" href="/assets/img/hero-acolhimento.jpg" as="image" media="(min-width: 768px)">
-  <link rel="preload" href="/assets/icons/flor-icone.svg" as="image">
 </head>
-
-
-
-
-
-
-
-
-
-
-
-<body>
 
 <header class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3" data-bs-theme="light">
@@ -306,8 +183,8 @@ body.page-transition {
         </li>
         
         <!-- Menu Suspenso "Sobre" -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="sobre.html">
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">
             <i class="bi bi-heart-pulse me-1"></i> Sobre Nós
           </a>
         </li>
@@ -341,13 +218,7 @@ body.page-transition {
 
 
 
-
-
-
-
-
-<main id="main">
-<main class="container-fluid">
+<main class="container-fluid" id="main">
   <div class="row">
     <!-- Sidebar Navigation -->
     <nav id="services-sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
@@ -403,11 +274,11 @@ body.page-transition {
     <!-- Main Content -->
     <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <!-- Hero Section -->
-      <section class="services-hero position-relative pt-5" style="background: linear-gradient(rgba(26, 43, 47, 0.9), rgba(26, 43, 47, 0.9)), url('assets/img/services-hero.jpg') center/cover no-repeat; min-height: 60vh;">
-        <div class="container h-100">
+      <section class="services-hero position-relative" style="background: linear-gradient(rgba(26, 43, 47, 0.9), rgba(26, 43, 47, 0.9)), url('assets/img/services-hero.jpg') center/cover no-repeat; min-height: 60vh;">
+        <div class="container h-100 pt-5">
           <div class="row h-100 align-items-center">
             <div class="col-lg-8 text-center text-lg-start text-white">
-              <h1 class="display-4 fw-bold mb-4 mt-5 text-light">Quando a dor cala, <span class="text-warning">nós escutamos</span></h1>
+              <h1 class="display-4 fw-bold mt-4 text-light">Quando a dor cala, <span class="text-warning">nós escutamos</span></h1>
               <p class="lead mb-5">Serviços terapêuticos que transformam o sofrimento em crescimento</p>
             </div>
           </div>
@@ -573,273 +444,250 @@ body.page-transition {
         </div>
       </section>
 
-            <!-- Serviço 4: Mente em Paz -->
-      <div class="mb-5" id="menteempaz" data-aos="fade-up">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body p-5">
-            <h3 class="fw-bold mb-3">Mente em Paz</h3>
-            <p class="lead text-warning">Técnicas para Vencer a Ansiedade</p>
-            
-            <p class="mb-4">Se sua mente é um campo de batalha onde pensamentos catastróficos se enfrentam, este percurso oferece as armas para restaurar a paz. Para quem:</p>
-            
-            <ul class="mb-4">
-              <li>Acorda no meio da noite com preocupações que não consegue controlar</li>
-              <li>Evita situações cotidianas por medo de ter crises de ansiedade</li>
-              <li>Sente palpitações, tremores ou falta de ar sem causa médica aparente</li>
-              <li>Tem pensamentos repetitivos que não consegue desligar</li>
-            </ul>
-            
-            <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#menteempazDetails">
-              Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-            </button>
-            
-            <div class="collapse" id="menteempazDetails">
-              <div class="pt-3">
-                <h5 class="mb-3">Estratégias de enfrentamento:</h5>
-                <ul class="mb-4">
-                  <li><strong>Identificação de padrões ansiosos:</strong> Mapeie os gatilhos específicos que disparam sua ansiedade e as reações em cadeia que eles provocam</li>
-                  <li><strong>Técnicas de grounding imediato:</strong> Aprenda métodos práticos para interromper crises no momento em que começam, incluindo técnicas sensoriais e cognitivas</li>
-                  <li><strong>Reestruturação do diálogo interno:</strong> Transforme o modo como você conversa consigo mesmo, reduzindo a intensidade das previsões catastróficas</li>
-                  <li><strong>Exposição gradual e segura:</strong> Enfrente medos específicos num ritmo controlado e com suporte terapêutico</li>
-                  <li><strong>Plano de prevenção de recaídas:</strong> Desenvolva estratégias personalizadas para manter os ganhos a longo prazo</li>
-                </ul>
-                
-                <h5 class="mb-3">Abordagens comprovadas:</h5>
-                <ul class="mb-4">
-                  <li>Terapia Cognitivo-Comportamental para Ansiedade (TCC-A)</li>
-                  <li>Técnicas de Terceira Onda (ACT e DBT) adaptadas para contextos de stress pós-traumático</li>
-                  <li>Psicoeducação sobre o sistema nervoso e respostas ao stress</li>
-                  <li>Protocolos de relaxamento profundo específicos para seu tipo de ansiedade</li>
-                </ul>
-                
-                <h5 class="mb-3">Benefícios alcançados:</h5>
-                <ul>
-                  <li>Redução significativa da frequência e intensidade das crises</li>
-                  <li>Maior sensação de controle sobre pensamentos e reações físicas</li>
-                  <li>Capacidade de enfrentar situações antes evitadas</li>
-                  <li>Melhora na qualidade do sono e concentração</li>
-                  <li>Relacionamentos menos tensionados pela ansiedade</li>
-                </ul>
+      <!-- Serviço 4: Mente em Paz -->
+      <section id="menteempaz" class="py-5 bg-light">
+        <div class="container py-5">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-5">
+              <h3 class="fw-bold mb-3">Mente em Paz</h3>
+              <p class="lead text-warning">Técnicas para Vencer a Ansiedade</p>
+              
+              <p class="mb-4">Se sua mente é um campo de batalha onde pensamentos catastróficos se enfrentam, este percurso oferece as armas para restaurar a paz. Para quem:</p>
+              
+              <ul class="mb-4">
+                <li>Acorda no meio da noite com preocupações que não consegue controlar</li>
+                <li>Evita situações cotidianas por medo de ter crises de ansiedade</li>
+                <li>Sente palpitações, tremores ou falta de ar sem causa médica aparente</li>
+              </ul>
+              
+              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#menteempazDetails">
+                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
+              </button>
+              
+              <div class="collapse" id="menteempazDetails">
+                <div class="pt-3">
+                  <h5 class="mb-3">Estratégias de enfrentamento:</h5>
+                  <ul class="mb-4">
+                    <li><strong>Identificação de padrões ansiosos:</strong> Mapeie os gatilhos específicos que disparam sua ansiedade</li>
+                    <li><strong>Técnicas de grounding imediato:</strong> Aprenda métodos práticos para interromper crises no momento em que começam</li>
+                    <li><strong>Reestruturação do diálogo interno:</strong> Transforme o modo como você conversa consigo mesmo</li>
+                  </ul>
+                  
+                  <h5 class="mb-3">Abordagens comprovadas:</h5>
+                  <ul class="mb-4">
+                    <li>Terapia Cognitivo-Comportamental para Ansiedade (TCC-A)</li>
+                    <li>Técnicas de Terceira Onda (ACT e DBT) adaptadas para contextos de stress</li>
+                    <li>Psicoeducação sobre o sistema nervoso e respostas ao stress</li>
+                  </ul>
+                  
+                  <h5 class="mb-3">Benefícios alcançados:</h5>
+                  <ul>
+                    <li>Redução significativa da frequência e intensidade das crises</li>
+                    <li>Maior sensação de controle sobre pensamentos e reações físicas</li>
+                    <li>Capacidade de enfrentar situações antes evitadas</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Serviço 5: Fala que Transforma -->
-      <div class="mb-5" id="falaquetransforma" data-aos="fade-up">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body p-5">
-            <h3 class="fw-bold mb-3">Fala que Transforma</h3>
-            <p class="lead text-warning">Comunicação Empática e Eficaz</p>
-            
-            <p class="mb-4">Se suas conversas frequentemente viram conflitos ou se você engole o que sente para evitar discussões, este treinamento é para você. Ideal para quem:</p>
-            
-            <ul class="mb-4">
-              <li>Sente que não é ouvido ou compreendido</li>
-              <li>Evita falar o que pensa por medo de reações</li>
-              <li>Se arrepende frequentemente do modo como se expressou</li>
-              <li>Tem dificuldade em colocar limites através da comunicação</li>
-            </ul>
-            
-            <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#falaquetransformaDetails">
-              Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-            </button>
-            
-            <div class="collapse" id="falaquetransformaDetails">
-              <div class="pt-3">
-                <h5 class="mb-3">O que você vai dominar:</h5>
-                <ul class="mb-4">
-                  <li><strong>Comunicação não-violenta:</strong> Aprenda a expressar necessidades sem culpar ou criticar, usando estruturas específicas que mantêm o diálogo aberto</li>
-                  <li><strong>Escuta ativa profunda:</strong> Desenvolva a capacidade de ouvir verdadeiramente, indo além das palavras para captar emoções e necessidades não expressas</li>
-                  <li><strong>Assertividade culturalmente adaptada:</strong> Encontre o equilíbrio entre passividade e agressividade no contexto angolano, respeitando hierarquias sem se anular</li>
-                  <li><strong>Gestão de conflitos:</strong> Transforme discussões em diálogos produtivos usando técnicas de mediação adaptadas para relacionamentos pessoais e profissionais</li>
-                  <li><strong>Comunicação não-verbal:</strong> Ajuste sua postura, tom de voz e expressões faciais para alinhar sua mensagem com sua intenção</li>
-                </ul>
-                
-                <h5 class="mb-3">Metodologia prática:</h5>
-                <ul class="mb-4">
-                  <li>Role-playing de situações reais do seu cotidiano</li>
-                  <li>Análise de padrões comunicativos familiares herdados</li>
-                  <li>Técnicas de reformulação linguística para mensagens difíceis</li>
-                  <li>Exercícios de comunicação em contextos de alta carga emocional</li>
-                </ul>
-                
-                <h5 class="mb-3">Impacto nos relacionamentos:</h5>
-                <ul>
-                  <li>Conversas mais autênticas e menos defensivas</li>
-                  <li>Capacidade de resolver conflitos sem danificar vínculos</li>
-                  <li>Expressão clara de limites e necessidades</li>
-                  <li>Melhor compreensão das dinâmicas comunicativas em sua família e trabalho</li>
-                  <li>Redução de mal-entendidos e frustrações acumuladas</li>
-                </ul>
+      <section id="falaquetransforma" class="py-5">
+        <div class="container py-5">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-5">
+              <h3 class="fw-bold mb-3">Fala que Transforma</h3>
+              <p class="lead text-warning">Comunicação Empática e Eficaz</p>
+              
+              <p class="mb-4">Se suas conversas frequentemente viram conflitos ou se você engole o que sente para evitar discussões, este treinamento é para você. Ideal para quem:</p>
+              
+              <ul class="mb-4">
+                <li>Sente que não é ouvido ou compreendido</li>
+                <li>Evita falar o que pensa por medo de reações</li>
+                <li>Se arrepende frequentemente do modo como se expressou</li>
+              </ul>
+              
+              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#falaquetransformaDetails">
+                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
+              </button>
+              
+              <div class="collapse" id="falaquetransformaDetails">
+                <div class="pt-3">
+                  <h5 class="mb-3">O que você vai dominar:</h5>
+                  <ul class="mb-4">
+                    <li><strong>Comunicação não-violenta:</strong> Aprenda a expressar necessidades sem culpar ou criticar</li>
+                    <li><strong>Escuta ativa profunda:</strong> Desenvolva a capacidade de ouvir verdadeiramente</li>
+                    <li><strong>Assertividade culturalmente adaptada:</strong> Encontre o equilíbrio entre passividade e agressividade</li>
+                  </ul>
+                  
+                  <h5 class="mb-3">Metodologia prática:</h5>
+                  <ul class="mb-4">
+                    <li>Role-playing de situações reais do seu cotidiano</li>
+                    <li>Análise de padrões comunicativos familiares herdados</li>
+                    <li>Técnicas de reformulação linguística para mensagens difíceis</li>
+                  </ul>
+                  
+                  <h5 class="mb-3">Impacto nos relacionamentos:</h5>
+                  <ul>
+                    <li>Conversas mais autênticas e menos defensivas</li>
+                    <li>Capacidade de resolver conflitos sem danificar vínculos</li>
+                    <li>Expressão clara de limites e necessidades</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Serviço 6: Limites que Libertam -->
-      <div class="mb-5" id="limitesquelibertam" data-aos="fade-up">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body p-5">
-            <h3 class="fw-bold mb-3">Limites que Libertam</h3>
-            <p class="lead text-warning">Assertividade com Respeito e Clareza</p>
-            
-            <p class="mb-4">Dizer "não" sem culpa é uma habilidade que poucos dominam. Se você se sente sobrecarregado por assumir responsabilidades que não são suas, este percurso ensina:</p>
-            
-            <ul class="mb-4">
-              <li>A diferença entre egoísmo e auto-preservação saudável</li>
-              <li>Técnicas para estabelecer limites sem destruir relacionamentos</li>
-              <li>Como lidar com a culpa que surge quando você prioriza suas necessidades</li>
-              <li>Estratégias para pessoas que não respeitam seus limites</li>
-            </ul>
-            
-            <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#limitesquelibertamDetails">
-              Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-            </button>
-            
-            <div class="collapse" id="limitesquelibertamDetails">
-              <div class="pt-3">
-                <h5 class="mb-3">Conteúdo detalhado:</h5>
-                <ul class="mb-4">
-                  <li><strong>Diagnóstico de limites pessoais:</strong> Identifique áreas específicas da sua vida onde seus limites estão sendo violados ou são inexistentes</li>
-                  <li><strong>Origens culturais e familiares:</strong> Explore como sua criação e contexto social influenciaram sua dificuldade com limites</li>
-                  <li><strong>Hierarquia de valores pessoais:</strong> Estabeleça quais princípios são inegociáveis para você e como comunicá-los</li>
-                  <li><strong>Técnicas de comunicação assertiva:</strong> Aprenda fórmulas específicas para dizer "não" em diferentes contextos (família, trabalho, relacionamentos)</li>
-                  <li><strong>Gerenciamento de reações alheias:</strong> Desenvolva resiliência emocional para lidar com resistência ou manipulação quando você estabelece limites</li>
-                </ul>
-                
-                <h5 class="mb-3">Abordagens terapêuticas:</h5>
-                <ul class="mb-4">
-                  <li>Terapia dos Esquemas para identificar padrões de submissão</li>
-                  <li>Técnicas de Role-playing para treinar situações desafiadoras</li>
-                  <li>Análise transacional para entender dinâmicas de poder</li>
-                  <li>Exercícios de visualização para fortalecer a autoimagem assertiva</li>
-                </ul>
-                
-                <h5 class="mb-3">Resultados esperados:</h5>
-                <ul>
-                  <li>Maior sensação de controle sobre seu tempo e energia</li>
-                  <li>Relacionamentos mais equilibrados e menos desgastantes</li>
-                  <li>Redução significativa de ressentimentos acumulados</li>
-                  <li>Autoestima fortalecida através da autoafirmação</li>
-                  <li>Capacidade de priorizar suas necessidades sem culpa patológica</li>
-                </ul>
+      <section id="limitesquelibertam" class="py-5 bg-light">
+        <div class="container py-5">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-5">
+              <h3 class="fw-bold mb-3">Limites que Libertam</h3>
+              <p class="lead text-warning">Assertividade com Respeito e Clareza</p>
+              
+              <p class="mb-4">Dizer "não" sem culpa é uma habilidade que poucos dominam. Se você se sente sobrecarregado por assumir responsabilidades que não são suas, este percurso ensina:</p>
+              
+              <ul class="mb-4">
+                <li>A diferença entre egoísmo e auto-preservação saudável</li>
+                <li>Técnicas para estabelecer limites sem destruir relacionamentos</li>
+                <li>Como lidar com a culpa que surge quando você prioriza suas necessidades</li>
+              </ul>
+              
+              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#limitesquelibertamDetails">
+                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
+              </button>
+              
+              <div class="collapse" id="limitesquelibertamDetails">
+                <div class="pt-3">
+                  <h5 class="mb-3">Conteúdo detalhado:</h5>
+                  <ul class="mb-4">
+                    <li><strong>Diagnóstico de limites pessoais:</strong> Identifique áreas específicas da sua vida onde seus limites estão sendo violados</li>
+                    <li><strong>Origens culturais e familiares:</strong> Explore como sua criação influenciou sua dificuldade com limites</li>
+                    <li><strong>Hierarquia de valores pessoais:</strong> Estabeleça quais princípios são inegociáveis para você</li>
+                  </ul>
+                  
+                  <h5 class="mb-3">Abordagens terapêuticas:</h5>
+                  <ul class="mb-4">
+                    <li>Terapia dos Esquemas para identificar padrões de submissão</li>
+                    <li>Técnicas de Role-playing para treinar situações desafiadoras</li>
+                    <li>Análise transacional para entender dinâmicas de poder</li>
+                  </ul>
+                  
+                  <h5 class="mb-3">Resultados esperados:</h5>
+                  <ul>
+                    <li>Maior sensação de controle sobre seu tempo e energia</li>
+                    <li>Relacionamentos mais equilibrados e menos desgastantes</li>
+                    <li>Redução significativa de ressentimentos acumulados</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Serviço 7: Viver Depois da Perda -->
-      <div class="mb-5" id="viverdepoisdaperda" data-aos="fade-up">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body p-5">
-            <h3 class="fw-bold mb-3">Viver Depois da Perda</h3>
-            <p class="lead text-warning">Cuidando do Luto e dos Recomeços</p>
-            
-            <p class="mb-4">O luto não é apenas sobre a morte - é sobre qualquer perda significativa: relacionamentos, saúde, empregos, sonhos. Este espaço é para quem:</p>
-            
-            <ul class="mb-4">
-              <li>Sente que o mundo seguiu em frente enquanto você ficou parado no tempo</li>
-              <li>Tem medo de "superar" porque acha que isso significa esquecer</li>
-              <li>Experimenta ondas de saudade que parecem insuportáveis</li>
-              <li>Não reconhece mais a si mesmo depois da perda</li>
-            </ul>
-            
-            <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#viverdepoisdaperdaDetails">
-              Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-            </button>
-            
-            <div class="collapse" id="viverdepoisdaperdaDetails">
-              <div class="pt-3">
-                <h5 class="mb-3">O processo de cura:</h5>
-                <ul class="mb-4">
-                  <li><strong>Validação da dor:</strong> Um espaço seguro para expressar sua saudade sem julgamentos ou pressão para "superar"</li>
-                  <li><strong>Reconexão com o que foi perdido:</strong> Ritualização e métodos simbólicos para manter uma conexão saudável com a memória</li>
-                  <li><strong>Reconstrução identitária:</strong> Quem você é depois dessa perda? Como integrar essa experiência à sua história de vida</li>
-                  <li><strong>Gestão de gatilhos:</strong> Datas comemorativas, lugares e situações que reacendem a dor - como lidar com eles</li>
-                  <li><strong>Reengajamento vital:</strong> Encontrar pequenos motivos para seguir em frente sem trair a memória do que foi perdido</li>
-                </ul>
-                
-                <h5 class="mb-3">Abordagens sensíveis:</h5>
-                <ul class="mb-4">
-                  <li>Terapia do Luto com abordagem em Tarefas de William Worden</li>
-                  <li>Técnicas narrativas para reconstrução de significado</li>
-                  <li>Intervenções baseadas em Mindfulness para lidar com ondas de dor</li>
-                  <li>Arte-terapia para expressão não-verbal do luto</li>
-                </ul>
-                
-                <h5 class="mb-3">Caminhos possíveis:</h5>
-                <ul>
-                  <li>Aprender a carregar a saudade sem que ela te paralise</li>
-                  <li>Redescobrir alegrias sem culpa</li>
-                  <li>Honrar a memória enquanto se permite viver o presente</li>
-                  <li>Transformar a relação com a perda de fonte de dor para parte da sua história</li>
-                  <li>Reencontrar sentido em meio à ausência</li>
-                </ul>
+      <section id="viverdepoisdaperda" class="py-5">
+        <div class="container py-5">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-5">
+              <h3 class="fw-bold mb-3">Viver Depois da Perda</h3>
+              <p class="lead text-warning">Cuidando do Luto e dos Recomeços</p>
+              
+              <p class="mb-4">O luto não é apenas sobre a morte - é sobre qualquer perda significativa: relacionamentos, saúde, empregos, sonhos. Este espaço é para quem:</p>
+              
+              <ul class="mb-4">
+                <li>Sente que o mundo seguiu em frente enquanto você ficou parado no tempo</li>
+                <li>Tem medo de "superar" porque acha que isso significa esquecer</li>
+                <li>Experimenta ondas de saudade que parecem insuportáveis</li>
+              </ul>
+              
+              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#viverdepoisdaperdaDetails">
+                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
+              </button>
+              
+              <div class="collapse" id="viverdepoisdaperdaDetails">
+                <div class="pt-3">
+                  <h5 class="mb-3">O processo de cura:</h5>
+                  <ul class="mb-4">
+                    <li><strong>Validação da dor:</strong> Um espaço seguro para expressar sua saudade sem julgamentos</li>
+                    <li><strong>Reconexão com o que foi perdido:</strong> Ritualização e métodos simbólicos para manter uma conexão saudável</li>
+                    <li><strong>Reconstrução identitária:</strong> Quem você é depois dessa perda? Como integrar essa experiência à sua história</li>
+                  </ul>
+                  
+                  <h5 class="mb-3">Abordagens sensíveis:</h5>
+                  <ul class="mb-4">
+                    <li>Terapia do Luto com abordagem em Tarefas de William Worden</li>
+                    <li>Técnicas narrativas para reconstrução de significado</li>
+                    <li>Intervenções baseadas em Mindfulness para lidar com ondas de dor</li>
+                  </ul>
+                  
+                  <h5 class="mb-3">Caminhos possíveis:</h5>
+                  <ul>
+                    <li>Aprender a carregar a saudade sem que ela te paralise</li>
+                    <li>Redescobrir alegrias sem culpa</li>
+                    <li>Honrar a memória enquanto se permite viver o presente</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Serviço 8: Presença que Cura -->
-      <div class="mb-5" id="presencaquecura" data-aos="fade-up">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body p-5">
-            <h3 class="fw-bold mb-3">Presença que Cura</h3>
-            <p class="lead text-warning">Escuta Ativa e Diálogo Consciente</p>
-            
-            <p class="mb-4">Para profissionais de ajuda (médicos, professores, líderes) e cuidadores familiares que desejam transformar sua presença em instrumento de cura. Ideal para:</p>
-            
-            <ul class="mb-4">
-              <li>Profissionais de saúde que querem ir além do tratamento técnico</li>
-              <li>Professores que lidam com alunos em sofrimento emocional</li>
-              <li>Líderes que desejam criar ambientes psicologicamente seguros</li>
-              <li>Familiares cuidando de pessoas com doenças crônicas ou depressão</li>
-            </ul>
-            
-            <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#presencaquecuraDetails">
-              Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-            </button>
-            
-            <div class="collapse" id="presencaquecuraDetails">
-              <div class="pt-3">
-                <h5 class="mb-3">Habilidades desenvolvidas:</h5>
-                <ul class="mb-4">
-                  <li><strong>Escuta terapêutica básica:</strong> Técnicas para ouvir além das palavras, captando emoções e necessidades não expressas</li>
-                  <li><strong>Comunicação não-verbal curativa:</strong> Como seu corpo, tom de voz e microexpressões podem transmitir segurança e acolhimento</li>
-                  <li><strong>Contenção emocional:</strong> Manter-se centrado ao lidar com a dor alheia sem absorvê-la</li>
-                  <li><strong>Perguntas poderosas:</strong> Formular questionamentos que ajudam o outro a refletir e encontrar suas próprias respostas</li>
-                  <li><strong>Limites do papel de cuidador:</strong> Saber quando indicar ajuda profissional e como fazer essa transição</li>
-                </ul>
-                
-                <h5 class="mb-3">Metodologia prática:</h5>
-                <ul class="mb-4">
-                  <li>Exercícios de calibração emocional para reconhecer estados internos alheios</li>
-                  <li>Simulações de situações desafiadoras com feedback personalizado</li>
-                  <li>Técnicas de regulação emocional para o cuidador evitar burnout</li>
-                  <li>Protocolos para conversas difíceis sobre doença, morte e perdas</li>
-                </ul>
-                
-                <h5 class="mb-3">Impacto profissional e pessoal:</h5>
-                <ul>
-                  <li>Melhora na qualidade das interações profissionais</li>
-                  <li>Prevenção do esgotamento emocional do cuidador</li>
-                  <li>Habilidade de criar espaços seguros para expressão emocional</li>
-                  <li>Maior satisfação no papel de ajudador</li>
-                  <li>Equilíbrio entre envolvimento e distanciamento saudável</li>
-                </ul>
+      <section id="presencaquecura" class="py-5 bg-light">
+        <div class="container py-5">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-5">
+              <h3 class="fw-bold mb-3">Presença que Cura</h3>
+              <p class="lead text-warning">Escuta Ativa e Diálogo Consciente</p>
+              
+              <p class="mb-4">Para profissionais de ajuda (médicos, professores, líderes) e cuidadores familiares que desejam transformar sua presença em instrumento de cura. Ideal para:</p>
+              
+              <ul class="mb-4">
+                <li>Profissionais de saúde que querem ir além do tratamento técnico</li>
+                <li>Professores que lidam com alunos em sofrimento emocional</li>
+                <li>Líderes que desejam criar ambientes psicologicamente seguros</li>
+              </ul>
+              
+              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#presencaquecuraDetails">
+                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
+              </button>
+              
+              <div class="collapse" id="presencaquecuraDetails">
+                <div class="pt-3">
+                  <h5 class="mb-3">Habilidades desenvolvidas:</h5>
+                  <ul class="mb-4">
+                    <li><strong>Escuta terapêutica básica:</strong> Técnicas para ouvir além das palavras</li>
+                    <li><strong>Comunicação não-verbal curativa:</strong> Como seu corpo e tom de voz podem transmitir segurança</li>
+                    <li><strong>Contenção emocional:</strong> Manter-se centrado ao lidar com a dor alheia</li>
+                  </ul>
+                  
+                  <h5 class="mb-3">Metodologia prática:</h5>
+                  <ul class="mb-4">
+                    <li>Exercícios de calibração emocional para reconhecer estados internos alheios</li>
+                    <li>Simulações de situações desafiadoras com feedback personalizado</li>
+                    <li>Técnicas de regulação emocional para o cuidador evitar burnout</li>
+                  </ul>
+                  
+                  <h5 class="mb-3">Impacto profissional e pessoal:</h5>
+                  <ul>
+                    <li>Melhora na qualidade das interações profissionais</li>
+                    <li>Prevenção do esgotamento emocional do cuidador</li>
+                    <li>Habilidade de criar espaços seguros para expressão emocional</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
+      </section>
 
       <!-- CTA Final -->
       <section class="py-5 bg-warning bg-opacity-10">
@@ -862,6 +710,8 @@ body.page-transition {
       </section>
     </div>
   </div>
+</main>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -931,11 +781,7 @@ body.page-transition {
       }
     });
   });
-</script>>
-
-</main>
-
-
+</script>
 
 
 

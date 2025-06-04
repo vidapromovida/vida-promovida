@@ -67,32 +67,7 @@
       font-family: 'Poppins', sans-serif;
       background-color: var(--dourado-humanizado);
     }
-    /* Transições de página */
-.page-transition #dynamic-content {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-body.page-transition {
-  overflow-x: hidden;
-}
-
-/* Barra de progresso personalizada */
-#nprogress .bar {
-  background: #C9A44C !important;
-  height: 3px !important;
-}
-
-#nprogress .peg {
-  box-shadow: 0 0 10px #C9A44C, 0 0 5px #C9A44C !important;
-}
-
-/* Layout básico */
-#dynamic-content {
-  min-height: 60vh;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-}
+  
 
     .nav-link {
         transition: color 0.3s ease;
@@ -181,30 +156,12 @@ body.page-transition {
   .card:hover .icon-wrapper i {
     color: white !important;
   }
-/* PAGINA 404 */
 
-  .error-page {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    background-color: #FAFAFA;
-  }
-
-  @media (max-width: 992px) {
-    .error-page {
-      text-align: center;
-    }
-
-    .error-page .d-flex {
-      justify-content: center !important;
-    }
-  }
  </style>
   
   <!-- JavaScript (SPA + Animações) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js" defer></script>
 
   
@@ -328,7 +285,7 @@ body.page-transition {
       <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="100">
         <div class="p-3 bg-white rounded-3 h-100 shadow-sm">
           <i class="bi bi-people-fill text-warning fs-1 mb-2"></i>
-          <h3 class="counter mb-0" data-target="750">0</h3>
+          <h3 class="counter mb-0" data-target="67">0</h3>
           <p class="text-muted mb-0">Pacientes Atendidos</p>
         </div>
       </div>
@@ -337,7 +294,7 @@ body.page-transition {
       <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="200">
         <div class="p-3 bg-white rounded-3 h-100 shadow-sm">
           <i class="bi bi-award-fill text-warning fs-1 mb-2"></i>
-          <h3 class="counter mb-0" data-target="15">0</h3>
+          <h3 class="counter mb-0" data-target="2">0</h3>
           <p class="text-muted mb-0">Anos de Experiência</p>
         </div>
       </div>
@@ -346,7 +303,7 @@ body.page-transition {
       <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
         <div class="p-3 bg-white rounded-3 h-100 shadow-sm">
           <i class="bi bi-emoji-smile-fill text-warning fs-1 mb-2"></i>
-          <h3 class="counter mb-0" data-target="98">0</h3>
+          <h3 class="counter mb-0" data-target="84">0</h3>
           <p class="text-muted mb-0">% de Satisfação</p>
         </div>
       </div>
@@ -586,7 +543,7 @@ body.page-transition {
               </div>
               <h4 class="mb-3">Pequenos Gigantes</h4>
               <p class="text-muted mb-4">Terapia infantil, adaptada à realidade angolana.</p>
-              <a href="servicos.html#criancas" class="btn btn-sm btn-outline-warning">Detalhes</a>
+              <a href="servicos.html#pequenosgigantes" class="btn btn-sm btn-outline-warning">Detalhes</a>
             </div>
           </div>
         </div>
@@ -628,7 +585,7 @@ body.page-transition {
               </div>
               <h4 class="mb-3">Presença que cura</h4>
               <p class="text-muted mb-4">Escuta ativa e diálogo consistente.</p>
-              <a href="servicos.html#escutaativa" class="btn btn-sm btn-outline-warning">Detalhes</a>
+              <a href="servicos.html#presencaquecura" class="btn btn-sm btn-outline-warning">Detalhes</a>
             </div>
           </div>
         </div>

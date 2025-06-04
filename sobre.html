@@ -67,133 +67,13 @@
       font-family: 'Poppins', sans-serif;
       background-color: var(--dourado-humanizado);
     }
-    /* Transições de página */
-.page-transition #dynamic-content {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 
-body.page-transition {
-  overflow-x: hidden;
-}
-
-/* Barra de progresso personalizada */
-#nprogress .bar {
-  background: #C9A44C !important;
-  height: 3px !important;
-}
-
-#nprogress .peg {
-  box-shadow: 0 0 10px #C9A44C, 0 0 5px #C9A44C !important;
-}
-
-/* Layout básico */
-#dynamic-content {
-  min-height: 60vh;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-}
-
-    .nav-link {
-        transition: color 0.3s ease;
-        position: relative;
-    }
-
-    .nav-link:hover {
-        color: #C9A44C !important;
-    }
-
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #C9A44C;
-        transition: width 0.3s ease;
-    }
-
-    .nav-link:hover::after {
-        width: 100%;
-    }
-
-  .social-icon {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-  .social-icon:hover {
-    background-color: #C9A44C !important;
-    border-color: #C9A44C !important;
-    color: #1A2B2F !important;
-  }
-
-
-  .trust-bar {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .trust-bar {
-      margin-top: 0 !important;
-      border-radius: 0 !important;
-    }
-  }
-
-  /* Efeito hover sutil */
-  .trust-bar .bg-white {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .trust-bar .bg-white:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1) !important;
-  }
-    .hover-effect:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
-  }
-
-  .services-swiper {
-    padding-bottom: 40px;
-  }
-
-  .swiper-pagination-bullet-active {
-    background-color: #C9A44C !important;
-  }
-
-  .icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-  }
-
-  .card:hover .icon-wrapper {
-    background-color: #C9A44C !important;
-  }
-
-  .card:hover .icon-wrapper i {
-    color: white !important;
-  }
 
  </style>
   
   <!-- JavaScript (SPA + Animações) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js" defer></script>
-
-  
-  <!-- Pré-carregamento de Imagens Chave -->
-  <link rel="preload" href="/assets/img/hero-acolhimento.jpg" as="image" media="(min-width: 768px)">
-  <link rel="preload" href="/assets/icons/flor-icone.svg" as="image">
 </head>
 
 
@@ -233,8 +113,8 @@ body.page-transition {
         </li>
         
         <!-- Menu Suspenso "Sobre" -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="sobre.html">
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">
             <i class="bi bi-heart-pulse me-1"></i> Sobre Nós
           </a>
         </li>
