@@ -1,186 +1,410 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Metadados Essenciais -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sobre Nós | Vida Promovida - Saúde Emocional em Angola</title>
+  <meta name="description" content="Conheça nossa missão, visão e valores. Cuidado psicológico humanizado em Luanda, adaptado à realidade angolana.">
   
-  <!-- SEO Primário -->
-  <title>Vida Promovida | Saúde Emocional com Acolhimento e Dignidade</title>
-  <meta name="description" content="Espaço seguro para cuidado emocional em Angola. Oferecemos escuta ativa, terapias e workshops para transformação interior. Sua dor merece ser acolhida.">
-  <meta name="keywords" content="saúde mental Angola, terapia Luanda, acolhimento emocional, cuidado psicológico, workshops autoconhecimento">
-  <meta name="author" content="Vida PromoVIDA">
-  
-  <!-- OpenGraph / Social Sharing -->
-  <meta property="og:title" content="Vida PromoVIDA | Reconstruindo Dignidade Emocional">
-  <meta property="og:description" content="Na dor ou no crescimento, seu coração encontra amparo. Cuidado emocional humanizado em Angola.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vidapromovida.github.io/vida-promovida">
-  <meta property="og:image" content="https://vidapromovida.github.io/vida-promovida/assets/img/social-share.jpg">
-  <meta property="og:image:alt" content="Terapeuta e paciente em ambiente acolhedor, trocando um abraço">
-  <meta property="og:site_name" content="Vida PromoVIDA">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image:alt" content="Cuidado emocional que transforma vidas">
-  
-  <!-- Favicon (Cores Terapêuticas) -->
+  <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/assets/favicon/site.webmanifest">
-  <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#1a2b2f">
-  <meta name="msapplication-TileColor" content="#1a2b2f">
-  <meta name="theme-color" content="#f8f9fa">
   
-  <!-- Pré-carregamento Crítico -->
+  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Poppins:wght@500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Poppins:wght@500;600&display=swap">
-  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
   
-  <!-- CSS (Bootstrap + AOS + Ícones) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
-  <!-- CSS Inline (Identidade Visual) -->
   <style>
     :root {
-      --azul-terapeutico: #1A2B2F;  /* Estabilidade */
-      --dourado-humanizado: #C9A44C; /* Calor */
-      --branco-acolhedor: #FAFAFA;  /* Pureza */
-      --verde-renovacao: #88A47C;   /* Esperança */
+      --azul-profundo: #1A2B2F;
+      --dourado-acolhedor: #C9A44C;
+      --verde-renovacao: #88A47C;
+      --branco-suave: #FAFAFA;
+      --cinza-claro: #EEEEEE;
     }
+    
     body {
-      font-family: 'Lato', sans-serif;
-      color: var(--azul-terapeutico);
-      background-color: var(--branco-acolhedor);
-      line-height: 1.6;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: var(--azul-terapeutico);
-    }
-    .btn-cta {
       font-family: 'Poppins', sans-serif;
-      background-color: var(--dourado-humanizado);
+      color: var(--azul-profundo);
+      background-color: var(--branco-suave);
+      overflow-x: hidden;
     }
-
-
- </style>
-  
-  <!-- JavaScript (SPA + Animações) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    
+    /* Hero Section */
+    .hero-about {
+      background: linear-gradient(135deg, rgba(26,43,47,0.95) 0%, rgba(26,43,47,0.9) 100%);
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-pattern {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('assets/svg/pattern-about.svg') repeat;
+      opacity: 0.1;
+      z-index: 1;
+    }
+    
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: var(--dourado-acolhedor);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+      border-radius: 10px;
+    }
+    
+    .timeline-container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: var(--branco-suave);
+      border: 4px solid var(--dourado-acolhedor);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .left {
+      left: 0;
+    }
+    
+    .right {
+      left: 50%;
+    }
+    
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid var(--dourado-acolhedor);
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent var(--dourado-acolhedor);
+    }
+    
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid var(--dourado-acolhedor);
+      border-width: 10px 10px 10px 0;
+      border-color: transparent var(--dourado-acolhedor) transparent transparent;
+    }
+    
+    .right::after {
+      left: -16px;
+    }
+    
+    /* Cards de Valores */
+    .value-card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      background: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      height: 100%;
+    }
+    
+    .value-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .value-icon {
+      width: 80px;
+      height: 80px;
+      background-color: rgba(201, 164, 76, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: all 0.3s ease;
+    }
+    
+    .value-card:hover .value-icon {
+      background-color: var(--dourado-acolhedor);
+    }
+    
+    .value-card:hover .value-icon i {
+      color: white;
+    }
+    
+    /* Missão, Visão, Valores */
+    .mvw-card {
+      border-radius: 15px;
+      padding: 40px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .mvw-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .mvw-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--dourado-acolhedor);
+    }
+    
+    /* Efeitos visuais */
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(201, 164, 76, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(201, 164, 76, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(201, 164, 76, 0); }
+    }
+    
+    /* Responsividade */
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+      
+      .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-container::before {
+        left: 60px;
+        border: medium solid var(--dourado-acolhedor);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--dourado-acolhedor) transparent transparent;
+      }
+      
+      .left::after, .right::after {
+        left: 15px;
+      }
+      
+      .right {
+        left: 0%;
+      }
+    }
+    
+    
+    
+    
+        /* Botões */
+    .btn-primary {
+      background-color: var(--dourado-acolhedor);
+      border: none;
+      color: var(--azul-profundo);
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+        /* Footer */
+    footer {
+      background: var(--azul-profundo);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .footer-wave {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url('assets/img/wave-footer.jpg') no-repeat;
+      background-size: cover;
+      transform: translateY(-99%);
+    }
+    
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      background: var(--dourado-acolhedor);
+      transform: translateY(-3px);
+    }
+  </style>
 </head>
 
-
-
-
-
-
-
-
-
-
-
 <body>
-
-<header>
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3" data-bs-theme="light">
-  <div class="container">
-    <!-- Logo + Nome -->
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="assets/img/logo-vida-promovida.png" alt="Logo Vida Promovida - Mãos acolhendo uma flor" width="40" height="40" class="d-inline-block align-top me-2">
-      <span class="fs-4 fw-bold" style="color: #1A2B2F;">Vida Promovida</span>
-    </a>
-
-    <!-- Botão Mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Itens de Navegação -->
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <!-- Link Ativo -->
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">
-            <i class="bi bi-house-door me-1"></i> Início
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-vida-promovida.png" alt="Vida Promovida" height="40">
+      <span>VIDA PROMOVIDA</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="servicos.html">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="sobre.html">Sobre Nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+        </ul>
+        <div class="ms-lg-3 mt-3 mt-lg-0">
+          <a href="agendamento.html" class="btn btn-primary">
+            <i class="bi bi-calendar-check me-2"></i>Agendar Consulta
           </a>
-        </li>
-        
-        <!-- Menu Suspenso "Sobre" -->
-        <li class="nav-item">
-          <a class="nav-link" href="sobre.html">
-            <i class="bi bi-heart-pulse me-1"></i> Sobre Nós
-          </a>
-        </li>
-
-        <!-- Serviços -->
-        <li class="nav-item">
-          <a class="nav-link" href="servicos.html">
-            <i class="bi bi-people me-1"></i> Serviços
-          </a>
-        </li>
-
-        <!-- Contato -->
-        <li class="nav-item">
-          <a class="nav-link" href="contato.html">
-            <i class="bi bi-envelope me-1"></i> Contato
-          </a>
-        </li>
-      </ul>
-
-      <!-- Botão de Ação (Agendamento) -->
-      <div class="ms-lg-3 mt-3 mt-lg-0">
-        <a href="agendamento.html" class="btn btn-warning rounded-pill px-4 py-2 fw-bold" style="background-color: #C9A44C; border: none;">
-          <i class="bi bi-calendar-check me-2"></i> Agende uma Conversa
-        </a>
+        </div>
       </div>
     </div>
-  </div>
-</nav>
-</header>
-
-
-<main id="main">
-  <!-- Hero Section Sobre Nós -->
-  <section class="about-hero position-relative" style="background: linear-gradient(rgba(26, 43, 47, 0.9), rgba(26, 43, 47, 0.9)), url('assets/img/team-therapy.jpg') center/cover no-repeat; min-height: 60vh;">
-    <div class="container h-75 pt-5">
-      <div class="row h-100 align-items-center">
-        <div class="col-lg-8 text-center text-lg-start text-white">
-          <h1 class="display-4 fw-bold mb-4 text-light mt-5">Mais que conselhos, <span class="text-warning">terapia é viver</span></h1>
-          <p class="lead mb-5">Desde 2020 transformando vidas através do cuidado emocional consciente em Angola</p>
+  </nav>
+  
+  
+  <!-- Hero Section -->
+  <section class="hero-about">
+    <div class="hero-pattern"></div>
+    <div class="container position-relative z-2">
+      <div class="row align-items-center">
+        <div class="col-lg-7 text-white" data-aos="fade-right">
+          <h1 class="display-3 fw-bold mb-4">Nossa <span class="text-warning">Essência</span></h1>
+          <p class="lead mb-5">Transformando vidas através do cuidado emocional consciente e culturalmente sensível em Angola.</p>
+          <div class="d-flex flex-wrap gap-3 floating">
+            <a href="#nossa-historia" class="btn btn-outline-light btn-lg px-4">
+              <i class="bi bi-arrow-down-circle me-2"></i>Conheça Nossa Jornada
+            </a>
+          </div>
         </div>
+ 
       </div>
     </div>
   </section>
 
-  <!-- Nossa Jornada -->
+  <!-- Seção Missão, Visão, Valores -->
   <section class="py-5 bg-light">
     <div class="container py-5">
-      <div class="row align-items-center">
-
-        <div class="col-lg-6" data-aos="fade-left">
-          <h2 class="display-5 fw-bold mb-4">Nossa <span class="text-warning">Jornada</span></h2>
-          <p class="lead">Tudo começou alguém identificou a lacuna no atendimento psicológico culturalmente adaptado em Luanda.</p>
-          <p>Com apenas dois consultórios, iniciamos nosso trabalho focando em comunidades carentes.</p>
-          <div class="d-flex mt-4">
-            <div class="pe-4 border-end">
-              <h3 class="text-warning">1k+</h3>
-              <p class="mb-0">Vidas impactadas</p>
+      <div class="row g-4">
+        <!-- Missão -->
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="mvw-card bg-white">
+            <div class="value-icon mb-4">
+              <i class="bi bi-bullseye text-warning fs-3"></i>
             </div>
-            <div class="px-4 border-end">
-              <h3 class="text-warning">12</h3>
-              <p class="mb-0">Comunidades atendidas</p>
+            <h3 class="mb-4">Missão</h3>
+            <p class="mb-0">Promover saúde emocional através de atendimento psicológico acessível, culturalmente adaptado e humanizado, contribuindo para o bem-estar individual e comunitário em Angola.</p>
+          </div>
+        </div>
+        
+        <!-- Visão -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="mvw-card bg-white">
+            <div class="value-icon mb-4">
+              <i class="bi bi-eye text-warning fs-3"></i>
             </div>
-            <div class="ps-4">
-              <h3 class="text-warning">100%</h3>
-              <p class="mb-0">Profissionais locais</p>
+            <h3 class="mb-4">Visão</h3>
+            <p class="mb-0">Ser referência em cuidado emocional em Angola até 2030, rompendo barreiras culturais e sociais que impedem o acesso à saúde mental de qualidade.</p>
+          </div>
+        </div>
+        
+        <!-- Valores -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="mvw-card bg-white">
+            <div class="value-icon mb-4">
+              <i class="bi bi-heart text-warning fs-3"></i>
             </div>
+            <h3 class="mb-4">Valores</h3>
+            <ul class="list-unstyled">
+              <li class="mb-2 d-flex">
+                <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                <span>Dignidade humana</span>
+              </li>
+              <li class="mb-2 d-flex">
+                <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                <span>Respeito cultural</span>
+              </li>
+              <li class="mb-2 d-flex">
+                <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                <span>Ética profissional</span>
+              </li>
+              <li class="mb-2 d-flex">
+                <i class="bi bi-check-circle-fill text-warning me-2"></i>
+                <span>Compromisso social</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -191,41 +415,61 @@
   <!-- Nossa Abordagem -->
   <section class="py-5 bg-light">
     <div class="container py-5">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2 mb-5 mb-lg-0" data-aos="fade-left">
-          <img src="assets/img/therapy-approach.jpg" alt="Abordagem terapêutica" class="img-fluid rounded shadow">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8" data-aos="fade-up">
+          <h2 class="mb-3">Nossa <span class="text-warning">Abordagem</span> Única</h2>
+          <p class="lead">Como cuidamos da saúde emocional dos angolanos</p>
         </div>
-        <div class="col-lg-6 order-lg-1" data-aos="fade-right">
-          <h2 class="display-5 fw-bold mb-4">Nossa <span class="text-warning">Abordagem</span></h2>
-          <p class="lead">Cuidado emocional enraizado na realidade angolana</p>
-          
+      </div>
+      
+      <div class="row g-4">
+
+        <div class="col-lg-6" data-aos="fade-bottom">
           <div class="d-flex mb-4">
-            <div class="flex-shrink-0 text-warning me-3">
-              <i class="bi bi-check-circle-fill fs-4"></i>
+            <div class="flex-shrink-0">
+              <div class="value-icon">
+                <i class="bi bi-globe-americas text-warning fs-4"></i>
+              </div>
             </div>
-            <div>
-              <h5 class="mb-2">Terapia Culturalmente Sensível</h5>
-              <p class="mb-0">Métodos adaptados às crenças, valores e desafios locais</p>
+            <div class="flex-grow-1 ms-4">
+              <h5 class="mb-3">Culturalmente Sensível</h5>
+              <p class="mb-0">Nossas terapias respeitam e incorporam valores culturais angolanos, criando pontes entre a psicologia ocidental e saberes tradicionais.</p>
             </div>
           </div>
           
           <div class="d-flex mb-4">
-            <div class="flex-shrink-0 text-warning me-3">
-              <i class="bi bi-check-circle-fill fs-4"></i>
+            <div class="flex-shrink-0">
+              <div class="value-icon">
+                <i class="bi bi-people text-warning fs-4"></i>
+              </div>
             </div>
-            <div>
-              <h5 class="mb-2">Integração de Saberes</h5>
-              <p class="mb-0">Unimos psicologia ocidental e saberes tradicionais africanos</p>
+            <div class="flex-grow-1 ms-4">
+              <h5 class="mb-3">Comunitária</h5>
+              <p class="mb-0">Atuamos não apenas com indivíduos, mas com famílias e comunidades, reconhecendo que a saúde emocional é coletiva.</p>
             </div>
           </div>
           
           <div class="d-flex mb-4">
-            <div class="flex-shrink-0 text-warning me-3">
-              <i class="bi bi-check-circle-fill fs-4"></i>
+            <div class="flex-shrink-0">
+              <div class="value-icon">
+                <i class="bi bi-heart text-warning fs-4"></i>
+              </div>
             </div>
-            <div>
-              <h5 class="mb-2">Foco na Comunidade</h5>
-              <p class="mb-0">Programas que transformam indivíduos e seu entorno social</p>
+            <div class="flex-grow-1 ms-4">
+              <h5 class="mb-3">Humanizada</h5>
+              <p class="mb-0">Cada atendimento é único, considerando a história, contexto social e aspirações de cada pessoa.</p>
+            </div>
+          </div>
+          
+          <div class="d-flex">
+            <div class="flex-shrink-0">
+              <div class="value-icon">
+                <i class="bi bi-lightbulb text-warning fs-4"></i>
+              </div>
+            </div>
+            <div class="flex-grow-1 ms-4">
+              <h5 class="mb-3">Inovadora</h5>
+              <p class="mb-0">Desenvolvemos metodologias próprias que respondem aos desafios específicos da realidade angolana.</p>
             </div>
           </div>
         </div>
@@ -233,63 +477,65 @@
     </div>
   </section>
 
-  <!-- Nossos Valores -->
+  <!-- Nossos Valores em Detalhe -->
   <section class="py-5 bg-white">
     <div class="container py-5">
-      <div class="text-center mb-5">
-        <h2 class="display-5 fw-bold mb-3">Nossos <span class="text-warning">Pilares</span></h2>
-        <p class="lead text-muted">Princípios que guiam cada atendimento</p>
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8" data-aos="fade-up">
+          <h2 class="mb-3">Nossos <span class="text-warning">Pilares</span></h2>
+          <p class="lead">Princípios que guiam cada decisão e atendimento</p>
+        </div>
       </div>
-
+      
       <div class="row g-4">
         <!-- Valor 1 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up">
-          <div class="card border-0 h-100 shadow-sm">
+          <div class="value-card">
             <div class="card-body p-4 text-center">
-              <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 80px; height: 80px;">
+              <div class="value-icon">
                 <i class="bi bi-heart-fill text-warning fs-3"></i>
               </div>
               <h4 class="mb-3">Dignidade</h4>
-              <p class="text-muted">Todo ser humano merece respeito incondicional, independente de sua história</p>
+              <p class="text-muted">Todo ser humano merece respeito incondicional, independente de sua história ou condição.</p>
             </div>
           </div>
         </div>
-
+        
         <!-- Valor 2 -->
         <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="card border-0 h-100 shadow-sm">
+          <div class="value-card">
             <div class="card-body p-4 text-center">
-              <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 80px; height: 80px;">
-                <i class="bi bi-people-fill text-warning fs-3"></i>
-              </div>
-              <h4 class="mb-3">Pertencimento</h4>
-              <p class="text-muted">Criamos laços de confiança que transcendem a relação terapeuta-paciente</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Valor 3 -->
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="card border-0 h-100 shadow-sm">
-            <div class="card-body p-4 text-center">
-              <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 80px; height: 80px;">
+              <div class="value-icon">
                 <i class="bi bi-shield-fill text-warning fs-3"></i>
               </div>
               <h4 class="mb-3">Ética</h4>
-              <p class="text-muted">Sigilo absoluto e conduta profissional irrepreensível</p>
+              <p class="text-muted">Sigilo absoluto e conduta profissional que coloca o paciente sempre em primeiro lugar.</p>
             </div>
           </div>
         </div>
-
-        <!-- Valor 4 -->
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="card border-0 h-100 shadow-sm">
+        
+        <!-- Valor 3 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-card">
             <div class="card-body p-4 text-center">
-              <div class="icon-wrapper bg-warning bg-opacity-10 mx-auto rounded-circle mb-4" style="width: 80px; height: 80px;">
+              <div class="value-icon">
                 <i class="bi bi-tree-fill text-warning fs-3"></i>
               </div>
               <h4 class="mb-3">Crescimento</h4>
-              <p class="text-muted">Acreditamos no potencial de transformação de cada indivíduo</p>
+              <p class="text-muted">Acreditamos no potencial ilimitado de transformação que existe em cada pessoa.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Valor 4 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="value-card">
+            <div class="card-body p-4 text-center">
+              <div class="value-icon">
+                <i class="bi bi-people-fill text-warning fs-3"></i>
+              </div>
+              <h4 class="mb-3">Pertencimento</h4>
+              <p class="text-muted">Criamos laços de confiança que transcendem a relação terapeuta-paciente.</p>
             </div>
           </div>
         </div>
@@ -302,113 +548,125 @@
     <div class="container py-5 text-center">
       <div class="row justify-content-center">
         <div class="col-lg-8" data-aos="zoom-in">
-          <h2 class="display-5 fw-bold mb-4">Pronto para começar sua jornada?</h2>
-          <p class="lead mb-5">Nossa equipe está pronta para te acolher com respeito e profissionalismo</p>
-          <a href="agendamento.html" class="btn btn-warning btn-lg px-4 py-3 fw-bold me-3">
-            <i class="bi bi-calendar-check me-2"></i> Agendar Consulta
-          </a>
+          <h2 class="display-5 fw-bold mb-4">Conecte-se com Nossa Essência</h2>
+          <p class="lead mb-5">Agende uma conversa inicial sem compromisso para conhecer melhor nosso trabalho</p>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+            <a href="agendamento.html" class="btn btn-warning btn-lg px-4 py-3 fw-bold">
+              <i class="bi bi-calendar-check me-2"></i> Agendar Consulta
+            </a>
+            <a href="contato.html" class="btn btn-outline-dark btn-lg px-4 py-3 fw-bold">
+              <i class="bi bi-chat-left-text me-2"></i> Fale Conosco
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
-</main>
 
-
-<footer class="bg-dark text-white pt-5 pb-4" style="background-color: #1A2B2F !important;">
-  <div class="container">
-    <div class="row">
-      
-      <!-- Chamada de Ação (CTA) -->
-      <div class="col-md-12 mb-5 text-center">
-        <div class="bg-light p-4 rounded-3 shadow" style="background-color: #FAFAFA !important;">
-          <h3 class="text-dark mb-3" style="color: #1A2B2F !important;">
-            <i class="bi bi-heart-fill text-danger me-2"></i> Não espere mais!
-          </h3>
-          <p class="lead text-dark mb-4" style="color: #1A2B2F !important;">
-            Nós podemos ajudar você. Agende uma sessão de terapia agora mesmo.
-          </p>
-          <a href="agendamento.html" 
-             class="btn btn-lg rounded-pill px-5 py-3 fw-bold shadow" 
-             style="background-color: #C9A44C; color: #1A2B2F;">
-            <i class="bi bi-calendar-check-fill me-2"></i> Agendar Sessão
-          </a>
-        </div>
-      </div>
-
-      <!-- Coluna 1: Logo + Slogan -->
-      <div class="col-md-4 mb-4">
-        <img src="assets/img/logo-vida-promovida.png" alt="Vida Promovida" width="60" height="60" class="mb-3">
-        <p class="text-white-50">
-          Cuidado emocional com acolhimento e dignidade em Angola.
-        </p>
-        <div class="mt-4">
-          <a href="#" class="text-white-50 me-3" style="text-decoration: none;">
-            <i class="bi bi-shield-lock-fill me-2"></i> Política de Privacidade
-          </a>
-        </div>
-      </div>
-
-      <!-- Coluna 2: Links Rápidos -->
-      <div class="col-md-2 mb-4">
-        <h5 class="text-warning mb-4">Navegação</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="index.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Início</a></li>
-          <li class="mb-2"><a href="servicos.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Serviços</a></li>
-          <li class="mb-2"><a href="sobre.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Sobre Nós</a></li>
-          <li class="mb-2"><a href="contato.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Contato</a></li>
-        </ul>
-      </div>
-
-      <!-- Coluna 3: Contatos -->
-      <div class="col-md-3 mb-4">
-        <h5 class="text-warning mb-4">Contacte-nos</h5>
-        <ul class="list-unstyled text-white-50">
-          <li class="mb-3"><i class="bi bi-envelope-fill me-2 text-warning"></i> vidapromovida@gmail.com</li>
-          <li class="mb-3"><i class="bi bi-telephone-fill me-2 text-warning"></i> +244 958 902 309</li>
-          <li class="mb-3"><i class="bi bi-geo-alt-fill me-2 text-warning"></i> Luanda, Angola</li>
-        </ul>
-      </div>
-
-      <!-- Coluna 4: Redes Sociais -->
-      <div class="col-md-3 mb-4">
-        <h5 class="text-warning mb-4">Siga-nos</h5>
-        <div class="d-flex">
-          <a href="https://facebook.com/vidapromovida" target="_blank" class="btn btn-outline-light rounded-circle me-2 social-icon">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://instagram.com/vidapromovida" target="_blank" class="btn btn-outline-light rounded-circle me-2 social-icon">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="https://wa.me/244958902309" target="_blank" class="btn btn-outline-light rounded-circle me-2 social-icon">
-            <i class="bi bi-whatsapp"></i>
-          </a>
+  <!-- Footer -->
+  <footer id="contato" class="pt-5 pb-4 position-relative">
+    <div class="footer-wave"></div>
+    <div class="container pt-5">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <img src="assets/img/logo-vida-promovida.png" alt="Vida Promovida" height="40" class="mb-3">
+          <p class="text-white-50 mb-4">Cuidado emocional com acolhimento e dignidade em Angola.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="social-icon text-white">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="social-icon text-white">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="social-icon text-white">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </div>
         </div>
         
-        <!-- Horário -->
-        <div class="mt-4 text-white-50">
-          <h6 class="text-warning">Horário</h6>
-          <p class="mb-1">Seg-Sex: 8h00 - 18h00</p>
-          <p>Sábado: 9h00 - 13h00</p>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="text-white mb-4">Links Rápidos</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Início</a></li>
+            <li class="mb-2"><a href="servicos.html" class="text-white-50 text-decoration-none">Serviços</a></li>
+            <li class="mb-2"><a href="sobre.html" class="text-white-50 text-decoration-none">Sobre Nós</a></li>
+            
+            <li class="mb-2"><a href="contato.html" class="text-white-50 text-decoration-none">Contato</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-4">
+          <h5 class="text-white mb-4">Contato</h5>
+          <ul class="list-unstyled text-white-50">
+            <li class="mb-3 d-flex">
+              <i class="bi bi-geo-alt-fill text-warning me-2"></i>
+              <span>Luanda, Angola</span>
+            </li>
+            <li class="mb-3 d-flex">
+              <i class="bi bi-envelope-fill text-warning me-2"></i>
+              <span>vidapromovida@gmail.com</span>
+            </li>
+            <li class="mb-3 d-flex">
+              <i class="bi bi-telephone-fill text-warning me-2"></i>
+              <span>+244 933 788 770</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-3 col-md-4">
+          <h5 class="text-white mb-4">Horário</h5>
+          <ul class="list-unstyled text-white-50">
+            <li class="mb-2 d-flex justify-content-between">
+              <span>Segunda - Sexta</span>
+              <span>8:00 - 20:00</span>
+            </li>
+            <li class="mb-2 d-flex justify-content-between">
+              <span>Sábado</span>
+              <span>9:00 - 20:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class="my-4 border-secondary">
+      
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-white-50 small">&copy; 2025 Vida Promovida. Todos os direitos reservados.</p>
         </div>
       </div>
     </div>
+  </footer>
 
-    <!-- Copyright -->
-    <div class="row pt-3 border-top border-secondary">
-      <div class="col-md-12 text-center text-white-50">
-        <p class="mb-0">&copy; 2025 Vida Promovida. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </div>
-</footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function(){
-        AOS.init({
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script>
+    // Inicializa AOS (Animações)
+    AOS.init({
       duration: 800,
-      easing: 'ease-in-out',
-      once: true // Animação ocorre apenas uma vez
+      easing: 'ease-in-out-quad',
+      once: true
     });
+    
+    // Smooth scroll para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
     });
-</script>
-</body></html>
-
+  </script>
+</body>
+</html>

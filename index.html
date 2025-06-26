@@ -33,7 +33,7 @@
       font-family: 'Poppins', sans-serif;
       color: var(--azul-profundo);
       background-color: var(--branco-suave);
-      overflow-x: crop;
+      overflow-x: hidden;
     }
     
     h1, h2, h3, h4 {
@@ -53,6 +53,7 @@
     
     .hero-illustration {
       position: absolute;
+      right: -50px;
       bottom: -50px;
       width: 600px;
       height: 600px;
@@ -276,7 +277,7 @@
   <!-- Barra de Navegação -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <img src="assets/img/logo-vida-promovida.png" alt="Vida Promovida" height="40">
       <span>VIDA PROMOVIDA</span>
       </a>
@@ -286,7 +287,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Início</a>
+            <a class="nav-link active" href="index.html">Início</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="servicos.html">Serviços</a>
@@ -299,7 +300,7 @@
           </li>
         </ul>
         <div class="ms-lg-3 mt-3 mt-lg-0">
-          <a href="#agendamento" class="btn btn-primary">
+          <a href="agendamento.html" class="btn btn-primary">
             <i class="bi bi-calendar-check me-2"></i>Agendar Consulta
           </a>
         </div>
@@ -309,7 +310,7 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <div class="hero-illustration" data-aos="fade-left" data-aos-delay="100"></div>
+    <div class="hero-illustration" data-aos="fade-bottom" data-aos-delay="100"></div>
     <div class="container position-relative z-2">
       <div class="row align-items-center">
         <div class="col-lg-7 text-white" data-aos="fade-right">
@@ -382,7 +383,7 @@
             </div>
             <h4 class="mb-3">Terapia Individual</h4>
             <p class="text-muted">Sessões personalizadas para lidar com ansiedade, depressão, traumas e desenvolvimento pessoal.</p>
-            <a href="#" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
+            <a href="servicos.html" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
           </div>
         </div>
         
@@ -394,7 +395,7 @@
             </div>
             <h4 class="mb-3">Terapia de Casal</h4>
             <p class="text-muted">Mediação de conflitos e melhoria na comunicação para relacionamentos mais saudáveis.</p>
-            <a href="#" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
+            <a href="servicos.html" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
           </div>
         </div>
         
@@ -406,7 +407,7 @@
             </div>
             <h4 class="mb-3">Aconselhamento Familiar</h4>
             <p class="text-muted">Harmonização das relações familiares e resolução de conflitos intergeracionais.</p>
-            <a href="#" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
+            <a href="servicos.html" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
           </div>
         </div>
         
@@ -419,7 +420,7 @@
     </div>
     <h4 class="mb-3">Apoio Infantil</h4>
     <p class="text-muted">Atendimentos terapêuticos para ajudar crianças e adolescentes a lidarem com emoções, ansiedade e convivência.</p>
-    <a href="#" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
+    <a href="servicos.html"  class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
   </div>
 </div>
         <!-- Serviço 5 -->
@@ -430,7 +431,7 @@
             </div>
             <h4 class="mb-3">Consultoria Empresarial</h4>
             <p class="text-muted">Saúde mental no trabalho e programas de bem-estar para equipes.</p>
-            <a href="#" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
+            <a href="servicos.html" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
           </div>
         </div>
         
@@ -442,7 +443,7 @@
             </div>
             <h4 class="mb-3">Atendimento Online</h4>
             <p class="text-muted">Terapia à distância para quem precisa de flexibilidade ou está fora de Luanda.</p>
-            <a href="#" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
+            <a href="servicos.html" class="btn btn-sm btn-outline-warning mt-3">Saiba Mais</a>
           </div>
         </div>
       </div>
@@ -465,7 +466,7 @@
             <img src="assets/img/icon-checklist-1.jpg" width="60" height="60" alt="Checklist" class="mb-3">
             <h4 class="mb-3">Guia de Autocuidado</h4>
             <p class="text-muted small">10 práticas diárias para melhorar sua saúde emocional</p>
-            <a href="#" class="btn btn-primary download-btn mt-3 w-100">
+            <a href="docs/guia-de-autocuidado.pdf" download class="btn btn-primary download-btn mt-3 w-100">
               <i class="bi bi-download me-2"></i>Baixar PDF
             </a>
           </div>
@@ -477,7 +478,7 @@
             <img src="assets/img/icon-checklist-2.jpg" width="60" height="60" alt="Checklist" class="mb-3">
             <h4 class="mb-3">Sinais de Ansiedade</h4>
             <p class="text-muted small">Identifique quando buscar ajuda profissional</p>
-            <a href="#" class="btn btn-primary download-btn mt-3 w-100">
+            <a href="docs/identifique-quando-buscar-ajuda-profissional.pdf" download class="btn btn-primary download-btn mt-3 w-100">
               <i class="bi bi-download me-2"></i>Baixar PDF
             </a>
           </div>
@@ -647,10 +648,6 @@
               <span>Sábado</span>
               <span>9:00 - 20:00</span>
             </li>
-            <li class="d-flex justify-content-between">
-              <span>Domingo</span>
-              <span>Fechado</span>
-            </li>
           </ul>
         </div>
       </div>
@@ -659,7 +656,7 @@
       
       <div class="row">
         <div class="col-md-6 text-center text-md-start">
-          <p class="mb-0 text-white-50 small">&copy; 2023 Vida Promovida. Todos os direitos reservados.</p>
+          <p class="mb-0 text-white-50 small">&copy; 2025 Vida Promovida. Todos os direitos reservados.</p>
         </div>
       </div>
     </div>

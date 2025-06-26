@@ -1,887 +1,1179 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Metadados Essenciais -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Serviços Terapêuticos | Vida Promovida - Saúde Emocional em Angola</title>
+  <meta name="description" content="Conheça nossos serviços terapêuticos especializados em Luanda. Terapia individual, infantil, casais e workshops para desenvolvimento pessoal e saúde mental.">
   
-  <!-- SEO Primário -->
-  <title>Vida Promovida | Serviços</title>
-  <meta name="description" content="Espaço seguro para cuidado emocional em Angola. Oferecemos escuta ativa, terapias e workshops para transformação interior. Sua dor merece ser acolhida.">
-  <meta name="keywords" content="saúde mental Angola, terapia Luanda, acolhimento emocional, cuidado psicológico, workshops autoconhecimento">
-  <meta name="author" content="Vida PromoVIDA">
-  
-  <!-- OpenGraph / Social Sharing -->
-  <meta property="og:title" content="Vida PromoVIDA | Reconstruindo Dignidade Emocional">
-  <meta property="og:description" content="Na dor ou no crescimento, seu coração encontra amparo. Cuidado emocional humanizado em Angola.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vidapromovida.github.io/vida-promovida">
-  <meta property="og:image" content="https://vidapromovida.github.io/vida-promovida/assets/img/social-share.jpg">
-  <meta property="og:image:alt" content="Terapeuta e paciente em ambiente acolhedor, trocando um abraço">
-  <meta property="og:site_name" content="Vida PromoVIDA">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image:alt" content="Cuidado emocional que transforma vidas">
-  
-  <!-- Favicon (Cores Terapêuticas) -->
+  <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/assets/favicon/site.webmanifest">
-  <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#1a2b2f">
-  <meta name="msapplication-TileColor" content="#1a2b2f">
-  <meta name="theme-color" content="#f8f9fa">
   
-  <!-- Pré-carregamento Crítico -->
+  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Poppins:wght@500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Poppins:wght@500;600&display=swap">
-  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
   
-  <!-- CSS (Bootstrap + AOS + Ícones) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
-  <!-- CSS Inline (Identidade Visual) -->
   <style>
     :root {
-      --azul-terapeutico: #1A2B2F;  /* Estabilidade */
-      --dourado-humanizado: #C9A44C; /* Calor */
-      --branco-acolhedor: #FAFAFA;  /* Pureza */
-      --verde-renovacao: #88A47C;   /* Esperança */
+      --azul-profundo: #1A2B2F;
+      --dourado-acolhedor: #C9A44C;
+      --verde-renovacao: #88A47C;
+      --branco-suave: #FAFAFA;
+      --cinza-claro: #EEEEEE;
+      --rosa-terapeutico: #FF9AA2;
+      --roxo-intuitivo: #B5A8F0;
     }
+    
     body {
-      font-family: 'Lato', sans-serif;
-      color: var(--azul-terapeutico);
-      background-color: var(--branco-acolhedor);
-      line-height: 1.6;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-      color: var(--azul-terapeutico);
-    }
-    .btn-cta {
       font-family: 'Poppins', sans-serif;
-      background-color: var(--dourado-humanizado);
+      color: var(--azul-profundo);
+      background-color: var(--branco-suave);
+      overflow-x: hidden;
     }
-
-  
-  
- 
-  /* Servicos */
-    .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-    padding: 48px 0 0;
-    box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    background-color: #f8f9fa;
-  }
-
-  .sidebar .nav-link {
-    font-weight: 500;
-    color: #1A2B2F;
-    padding: 0.75rem 1.5rem;
-    border-left: 3px solid transparent;
-    transition: all 0.3s ease;
-  }
-
-  .sidebar .nav-link:hover {
-    color: #C9A44C;
-    background-color: rgba(201, 164, 76, 0.1);
-  }
-
-  .sidebar .nav-link.active {
-    color: #C9A44C;
-    font-weight: 600;
-    border-left: 3px solid #C9A44C;
-    background-color: rgba(201, 164, 76, 0.1);
-  }
-
-  .sidebar .nav-link i {
-    width: 20px;
-    text-align: center;
-  }
-
-  .sidebar-heading {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
-
-  /* Adjust main content to account for fixed sidebar */
-  .col-md-9 {
-    margin-left: 25%;
-  }
-
-  @media (max-width: 767.98px) {
-    .sidebar {
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    
+    /* Hero Section Página Serviços */
+    .services-hero {
+      background: linear-gradient(135deg, rgba(26,43,47,0.95) 0%, rgba(26,43,47,0.9) 100%), 
+                  url('assets/img/services-hero-bg.jpg') center/cover;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
       position: relative;
+      overflow: hidden;      
+    }
+    
+    .service-path {
+      position: absolute;
       width: 100%;
-      height: auto;
-      padding: 0;
+      height: 100%;
+      background: url('assets/img/service-path.jpg') no-repeat;
+      background-position: right center;
+      background-size: contain;
+      opacity: 0.15;
+      z-index: 1;
     }
-    .col-md-9 {
-      margin-left: 0;
+    
+    /* Navegação Lateral */
+    .services-nav {
+      position: sticky;
+      top: 20px;
+      height: calc(100vh - 40px);
+      overflow-y: auto;
+      padding-right: 15px;
     }
-  }
-
-  /* Card styling */
-  .card {
-    border-radius: 0.5rem;
-    transition: transform 0.3s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-  }
-
-  /* Hero section */
-  .services-hero {
-    position: relative;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-  }
-  
- </style>
-  
-  <!-- JavaScript (SPA + Animações) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    
+    .nav-service-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      margin-bottom: 8px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      background: rgba(201, 164, 76, 0.05);
+      color: var(--azul-profundo);
+      text-decoration: none;
+    }
+    
+    .nav-service-item:hover, .nav-service-item.active {
+      background: var(--dourado-acolhedor);
+      color: white;
+      transform: translateX(5px);
+    }
+    
+    .nav-service-item i {
+      width: 24px;
+      text-align: center;
+      margin-right: 12px;
+      font-size: 1.1rem;
+    }
+    
+    /* Cards de Serviços Premium */
+    .service-card-premium {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      background: white;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+      position: relative;
+      z-index: 2;
+      margin-bottom: 30px;
+    }
+    
+    .service-card-premium:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    }
+    
+    .service-card-premium .card-header {
+      background: linear-gradient(135deg, var(--azul-profundo) 0%, #2a3d42 100%);
+      color: white;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .service-card-premium .card-header::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
+      height: 200%;
+      background: rgba(255,255,255,0.1);
+      transform: rotate(30deg);
+      transition: all 0.3s ease;
+    }
+    
+    .service-card-premium:hover .card-header::after {
+      right: 100%;
+    }
+    
+    .service-icon-premium {
+      width: 80px;
+      height: 80px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: -40px auto 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 3;
+      transition: all 0.3s ease;
+    }
+    
+    .service-card-premium:hover .service-icon-premium {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .service-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--dourado-acolhedor);
+      color: var(--azul-profundo);
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.8rem;
+      box-shadow: 0 5px 15px rgba(201, 164, 76, 0.3);
+    }
+    
+    /* Cores temáticas para cada serviço */
+    .service-1 .card-header { background: linear-gradient(135deg, #1A2B2F 0%, #2a3d42 100%); }
+    .service-2 .card-header { background: linear-gradient(135deg, #C9A44C 0%, #D9B85C 100%); }
+    .service-3 .card-header { background: linear-gradient(135deg, #88A47C 0%, #98B48C 100%); }
+    .service-4 .card-header { background: linear-gradient(135deg, #B5A8F0 0%, #C5B8FF 100%); }
+    .service-5 .card-header { background: linear-gradient(135deg, #FF9AA2 0%, #FFAAB2 100%); }
+    .service-6 .card-header { background: linear-gradient(135deg, #6A8CAF 0%, #7A9CBF 100%); }
+    .service-7 .card-header { background: linear-gradient(135deg, #8C7AA6 0%, #9C8AB6 100%); }
+    .service-8 .card-header { background: linear-gradient(135deg, #5E8B7E 0%, #6E9B8E 100%); }
+    
+    /* Efeito de onda entre seções */
+    .wave-divider {
+      position: relative;
+      height: 100px;
+      overflow: hidden;
+    }
+    
+    .wave-divider svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+    }
+    
+    /* Seção de Benefícios */
+    .benefit-item {
+      display: flex;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .benefit-item:hover {
+      transform: translateX(10px);
+    }
+    
+    .benefit-icon {
+      flex: 0 0 60px;
+      height: 60px;
+      background: rgba(201, 164, 76, 0.1);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1.5rem;
+      color: var(--dourado-acolhedor);
+      font-size: 1.5rem;
+    }
+    
+    /* FAQ Estilizado */
+    .faq-item {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .faq-item:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .faq-header {
+      background: white;
+      padding: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+    
+    .faq-content {
+      background: var(--branco-suave);
+      padding: 0 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    
+    .faq-item.active .faq-content {
+      max-height: 300px;
+      padding: 0 1.5rem 1.5rem;
+    }
+    
+    .faq-toggle {
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item.active .faq-toggle {
+      transform: rotate(180deg);
+    }
+    
+    /* Botões */
+    .btn-primary {
+      background-color: var(--dourado-acolhedor);
+      border: none;
+      color: var(--azul-profundo);
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(201, 164, 76, 0.3);
+    }
+    
+    /* Efeito de hover nos cards */
+    .hover-card {
+      transition: all 0.3s ease;
+    }
+    
+    .hover-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    /* Responsividade */
+    @media (max-width: 991.98px) {
+      .services-nav {
+        position: relative;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+      
+      .service-card-premium {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
 </head>
 
-<header class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3" data-bs-theme="light">
-  <div class="container">
-    <!-- Logo + Nome -->
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="assets/img/logo-vida-promovida.png" alt="Logo Vida Promovida - Mãos acolhendo uma flor" width="40" height="40" class="d-inline-block align-top me-2">
-      <span class="fs-4 fw-bold" style="color: #1A2B2F;">Vida Promovida</span>
-    </a>
-
-    <!-- Botão Mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Itens de Navegação -->
-    <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <!-- Link Ativo -->
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">
-            <i class="bi bi-house-door me-1"></i> Início
-          </a>
-        </li>
-        
-        <!-- Menu Suspenso "Sobre" -->
-        <li class="nav-item">
-          <a class="nav-link" href="sobre.html">
-            <i class="bi bi-heart-pulse me-1"></i> Sobre Nós
-          </a>
-        </li>
-
-        <!-- Serviços -->
-        <li class="nav-item">
-          <a class="nav-link" href="servicos.html">
-            <i class="bi bi-people me-1"></i> Serviços
-          </a>
-        </li>
-
-        <!-- Contato -->
-        <li class="nav-item">
-          <a class="nav-link" href="contato.html">
-            <i class="bi bi-envelope me-1"></i> Contato
-          </a>
-        </li>
-      </ul>
-
-      <!-- Botão de Ação (Agendamento) -->
-      <div class="ms-lg-3 mt-3 mt-lg-0">
-        <a href="agendamento.html" class="btn btn-warning rounded-pill px-4 py-2 fw-bold" style="background-color: #C9A44C; border: none;">
-          <i class="bi bi-calendar-check me-2"></i> Agende uma Conversa
-        </a>
-      </div>
-    </div>
-  </div>
-</nav>
-</header>
-
-
-
-
-<main class="container-fluid" id="main">
-  <div class="row">
-    <!-- Sidebar Navigation -->
-    <nav id="services-sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
-      <div class="position-sticky pt-3">
-        <h5 class="sidebar-heading px-3 mb-3 text-warning">
-          <i class="bi bi-list-check me-2"></i> Percursos Terapêuticos
-        </h5>
-        <ul class="nav flex-column" id="services-nav">
+<body>
+  <!-- Barra de Navegação -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-vida-promovida.png" alt="Vida Promovida" height="40">
+        <span>VIDA PROMOVIDA</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#dominatuasemocoes">
-              <i class="bi bi-emoji-frown me-2"></i> Domina Tuas Emoções
-            </a>
+            <a class="nav-link" href="index.html">Início</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#pequenosgigantes">
-              <i class="bi bi-emoji-smile me-2"></i> Pequenos Gigantes
-            </a>
+            <a class="nav-link active" href="servicos.html">Serviços</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#reencontrate">
-              <i class="bi bi-search-heart me-2"></i> Reencontra-te
-            </a>
+            <a class="nav-link" href="sobre.html">Sobre Nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#menteempaz">
-              <i class="bi bi-cloud-sun me-2"></i> Mente em Paz
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#falaquetransforma">
-              <i class="bi bi-chat-square-text me-2"></i> Fala que Transforma
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#limitesquelibertam">
-              <i class="bi bi-shield-check me-2"></i> Limites que Libertam
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#viverdepoisdaperda">
-              <i class="bi bi-symmetry-vertical me-2"></i> Viver Depois da Perda
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#presencaquecura">
-              <i class="bi bi-ear me-2"></i> Presença que Cura
-            </a>
+            <a class="nav-link" href="contato.html">Contato</a>
           </li>
         </ul>
+        <div class="ms-lg-3 mt-3 mt-lg-0">
+          <a href="agendamento.html" class="btn btn-primary">
+            <i class="bi bi-calendar-check me-2"></i>Agendar Consulta
+          </a>
+        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- Main Content -->
-    <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <!-- Hero Section -->
-      <section class="services-hero position-relative" style="background: linear-gradient(rgba(26, 43, 47, 0.9), rgba(26, 43, 47, 0.9)), url('assets/img/services-hero.jpg') center/cover no-repeat; min-height: 60vh;">
-        <div class="container h-100 pt-5">
-          <div class="row h-100 align-items-center">
-            <div class="col-lg-8 text-center text-lg-start text-white">
-              <h1 class="display-4 fw-bold mt-4 text-light">Quando a dor cala, <span class="text-warning">nós escutamos</span></h1>
-              <p class="lead mb-5">Serviços terapêuticos que transformam o sofrimento em crescimento</p>
+  <!-- Hero Section -->
+  <section class="services-hero">
+    <div class="service-path"></div>      
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-8 text-white" data-aos="fade-right">
+          <h1 class="display-3 fw-bold mb-4">Transforme sua <span class="text-warning">vida emocional</span></h1>
+          <p class="lead mb-5">Serviços terapêuticos especializados em Luanda, criados para atender às necessidades únicas da comunidade angolana.</p>
+          <a href="#servicos" class="btn btn-primary btn-lg px-4 py-3">
+            <i class="bi bi-arrow-down-circle me-2"></i>Conheça Nossos Serviços
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conteúdo Principal -->
+  <main class="container py-5">
+    <div class="row">
+      <!-- Navegação Lateral -->
+      <div class="col-lg-3">
+        <div class="services-nav">
+          <h5 class="mb-4 text-warning fw-bold">
+            <i class="bi bi-list-check me-2"></i> Nossos Serviços
+          </h5>
+          <nav id="services-sidebar">
+            <a class="nav-service-item" href="#dominatuasemocoes">
+              <i class="bi bi-emoji-frown"></i> Domina Tuas Emoções
+            </a>
+            <a class="nav-service-item" href="#pequenosgigantes">
+              <i class="bi bi-emoji-smile"></i> Pequenos Gigantes
+            </a>
+            <a class="nav-service-item" href="#reencontrate">
+              <i class="bi bi-search-heart"></i> Reencontra-te
+            </a>
+            <a class="nav-service-item" href="#menteempaz">
+              <i class="bi bi-cloud-sun"></i> Mente em Paz
+            </a>
+            <a class="nav-service-item" href="#falaquetransforma">
+              <i class="bi bi-chat-square-text"></i> Fala que Transforma
+            </a>
+            <a class="nav-service-item" href="#limitesquelibertam">
+              <i class="bi bi-shield-check"></i> Limites que Libertam
+            </a>
+            <a class="nav-service-item" href="#viverdepoisdaperda">
+              <i class="bi bi-symmetry-vertical"></i> Viver Depois da Perda
+            </a>
+            <a class="nav-service-item" href="#presencaquecura">
+              <i class="bi bi-ear"></i> Presença que Cura
+            </a>
+          </nav>
+        </div>
+      </div>
+      
+      <!-- Conteúdo dos Serviços -->
+      <div class="col-lg-9" id="servicos">
+        <!-- Introdução -->
+        <section class="mb-5" data-aos="fade-up">
+          <div class="card border-0 bg-light hover-card">
+            <div class="card-body p-4 p-lg-5">
+              <div class="row align-items-center">
+                <div class="col-lg-8">
+                  <h2 class="fw-bold mb-3">Caminhos para <span class="text-warning">bem-estar emocional</span></h2>
+                  <p class="lead">Na Vida Promovida, cada serviço foi cuidadosamente desenvolvido para atender às necessidades específicas da nossa comunidade, com abordagens culturalmente sensíveis e comprovadamente eficazes.</p>
+                </div>
+                
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Introdução -->
-      <section class="py-5 bg-light">
-        <div class="container py-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-10 text-center">
-              <h2 class="display-5 fw-bold mb-4">Por que nossos <span class="text-warning">serviços</span> são diferentes?</h2>
-              <p class="lead">Na Vida Promovida, não oferecemos soluções genéricas. Cada serviço foi criado a partir da nossa experiência real com pacientes angolanos, entendendo suas dores específicas e contextos culturais únicos.</p>
+        </section>
+        
+        <!-- Serviço 1: Domina Tuas Emoções -->
+        <section id="dominatuasemocoes" class="mb-5" data-aos="fade-up">
+          <div class="service-card-premium service-1">
+            <div class="card-header">
+              <h3 class="fw-bold text-white">Domina Tuas Emoções</h3>
+              <p class="text-white-50 mb-0">Fundamentos da Inteligência Emocional</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Serviço 1: Domina Tuas Emoções -->
-      <section id="dominatuasemocoes" class="py-5">
-        <div class="container py-5">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-5">
-              <h3 class="fw-bold mb-3">Domina Tuas Emoções</h3>
-              <p class="lead text-warning">Fundamentos da Inteligência Emocional</p>
-              
-              <p class="mb-4">Você já se sentiu dominado por emoções que parecem explodir sem controle? Este percurso é para quem:</p>
-              
-              <ul class="mb-4">
-                <li>Tem reações emocionais intensas e imprevisíveis</li>
-                <li>Se arrepende frequentemente de coisas que disse ou fez no calor do momento</li>
-                <li>Sente que as emoções controlam sua vida</li>
-              </ul>
-              
-              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#dominatuasemocoesDetails">
-                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-              </button>
-              
-              <div class="collapse" id="dominatuasemocoesDetails">
-                <div class="pt-3">
-                  <h5 class="mb-3">O que você vai aprender:</h5>
+            <div class="card-body p-4 p-lg-5">
+              <div class="service-icon-premium">
+                <i class="bi bi-emoji-frown fs-3 text-warning"></i>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Para quem é indicado:</h5>
                   <ul class="mb-4">
-                    <li><strong>Mapeamento emocional:</strong> Identifique os padrões que governam suas reações e suas origens</li>
-                    <li><strong>Técnicas de regulação imediata:</strong> Métodos práticos para acalmar seu sistema nervoso</li>
-                    <li><strong>Reconhecimento de gatilhos:</strong> Antecipe situações que disparam suas reações intensas</li>
+                    <li>Reações emocionais intensas e imprevisíveis</li>
+                    <li>Arrependimentos frequentes por ações no calor do momento</li>
+                    <li>Sensação de que as emoções controlam sua vida</li>
                   </ul>
-                  
-                  <h5 class="mb-3">Metodologia:</h5>
+                </div>
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Benefícios:</h5>
                   <ul class="mb-4">
-                    <li>Terapia Cognitivo-Comportamental adaptada ao contexto angolano</li>
-                    <li>Mindfulness Culturalmente Sensível</li>
-                    <li>Psicoeducação Emocional</li>
-                  </ul>
-                  
-                  <h5 class="mb-3">Resultados esperados:</h5>
-                  <ul>
                     <li>Maior autocontrole em situações desafiadoras</li>
                     <li>Relacionamentos mais harmoniosos</li>
-                    <li>Capacidade de identificar e nomear emoções com precisão</li>
+                    <li>Capacidade de identificar e nomear emoções</li>
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Serviço 2: Pequenos Gigantes -->
-      <section id="pequenosgigantes" class="py-5 bg-light">
-        <div class="container py-5">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-5">
-              <h3 class="fw-bold mb-3">Pequenos Gigantes</h3>
-              <p class="lead text-warning">Acompanhamento para crianças</p>
-              
-              <p class="mb-4">Seu filho está enfrentando desafios que você não sabe como ajudar? Este serviço é para pais que observam:</p>
-              
-              <ul class="mb-4">
-                <li>Mudanças bruscas de comportamento ou humor</li>
-                <li>Dificuldades de socialização ou isolamento excessivo</li>
-                <li>Problemas de atenção ou aprendizagem na escola</li>
-              </ul>
-              
-              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#pequenosgigantesDetails">
-                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-              </button>
-              
-              <div class="collapse" id="pequenosgigantesDetails">
-                <div class="pt-3">
-                  <h5 class="mb-3">Como ajudamos sua criança:</h5>
-                  <ul class="mb-4">
-                    <li><strong>Expressa emoções complexas</strong> através de jogos e brincadeiras terapêuticas</li>
-                    <li><strong>Desenvolve vocabulário emocional</strong> para nomear o que sente</li>
-                    <li><strong>Aprende regulação emocional</strong> com técnicas adaptadas</li>
-                  </ul>
-                  
-                  <h5 class="mb-3">Para os pais:</h5>
-                  <ul class="mb-4">
-                    <li>Orientação mensal para entender o mundo emocional do seu filho</li>
-                    <li>Estratégias específicas para lidar com crises em casa</li>
-                    <li>Estabelecer comunicação mais eficaz com sua criança</li>
-                  </ul>
-                  
-                  <h5 class="mb-3">Abordagens utilizadas:</h5>
-                  <ul>
-                    <li>Play Therapy adaptada ao contexto angolano</li>
-                    <li>Terapia Cognitivo-Comportamental Infantil</li>
-                    <li>Técnicas de Arte-Terapia para expressão não-verbal</li>
-                  </ul>
+              <div class="accordion" id="accordionDominar">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDominar">
+                      <i class="bi bi-info-circle me-2 text-warning"></i> Detalhes completos
+                    </button>
+                  </h2>
+                  <div id="collapseDominar" class="accordion-collapse collapse" data-bs-parent="#accordionDominar">
+                    <div class="accordion-body pt-4">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">O que você vai aprender:</h6>
+                          <ul>
+                            <li>Mapeamento emocional e origens dos padrões</li>
+                            <li>Técnicas de regulação imediata</li>
+                            <li>Reconhecimento de gatilhos emocionais</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Metodologia:</h6>
+                          <ul>
+                            <li>Terapia Cognitivo-Comportamental adaptada</li>
+                            <li>Mindfulness Culturalmente Sensível</li>
+                            <li>Psicoeducação Emocional</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="text-center mt-4">
+                <a href="agendamento.html" class="btn btn-primary px-4">
+                  <i class="bi bi-calendar-check me-2"></i>Agendar Este Serviço
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Serviço 3: Reencontra-te -->
-      <section id="reencontrate" class="py-5">
-        <div class="container py-5">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-5">
-              <h3 class="fw-bold mb-3">Reencontra-te</h3>
-              <p class="lead text-warning">Autoestima e Identidade com Propósito</p>
-              
-              <p class="mb-4">Você se sente perdido em sua própria vida? Este percurso é para quem:</p>
-              
-              <ul class="mb-4">
-                <li>Sente que perdeu a conexão consigo mesmo</li>
-                <li>Tem dificuldade em reconhecer seu próprio valor</li>
-                <li>Vive para agradar os outros em detrimento de suas necessidades</li>
-              </ul>
-              
-              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#reencontrateDetails">
-                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-              </button>
-              
-              <div class="collapse" id="reencontrateDetails">
-                <div class="pt-3">
-                  <h5 class="mb-3">O processo de redescoberta:</h5>
+        </section>
+        
+        <!-- Serviço 2: Pequenos Gigantes -->
+        <section id="pequenosgigantes" class="mb-5" data-aos="fade-up">
+          <div class="service-card-premium service-2">
+            <div class="card-header">
+              <h3 class="fw-bold text-white">Pequenos Gigantes</h3>
+              <p class="text-white-50 mb-0">Acompanhamento para crianças</p>
+            </div>
+            <div class="card-body p-4 p-lg-5">
+              <div class="service-icon-premium">
+                <i class="bi bi-emoji-smile fs-3 text-warning"></i>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Para quem é indicado:</h5>
                   <ul class="mb-4">
-                    <li><strong>Exploração de valores essenciais:</strong> Identifique o que realmente importa para você</li>
-                    <li><strong>Reconexão com necessidades negligenciadas:</strong> Aprenda a reconhecer e honrar suas verdadeiras necessidades</li>
-                    <li><strong>Desconstrução de máscaras sociais:</strong> Entenda quais papéis você assumiu para se adaptar</li>
+                    <li>Mudanças bruscas de comportamento ou humor</li>
+                    <li>Dificuldades de socialização ou isolamento</li>
+                    <li>Problemas de atenção ou aprendizagem</li>
                   </ul>
-                  
-                  <h5 class="mb-3">Técnicas utilizadas:</h5>
+                </div>
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Benefícios:</h5>
                   <ul class="mb-4">
-                    <li>Terapia do Esquema para identificar padrões de autossabotagem</li>
-                    <li>Exercícios de Psicologia Positiva focados em forças pessoais</li>
-                    <li>Constelação Sistêmica Individual para entender influências familiares</li>
-                  </ul>
-                  
-                  <h5 class="mb-3">Resultados transformadores:</h5>
-                  <ul>
-                    <li>Maior clareza sobre quem você é e o que realmente quer</li>
-                    <li>Capacidade de tomar decisões alinhadas com seus valores</li>
-                    <li>Relacionamentos mais autênticos e menos dependentes de aprovação</li>
+                    <li>Melhor expressão emocional da criança</li>
+                    <li>Fortalecimento da autoestima infantil</li>
+                    <li>Orientação para pais e cuidadores</li>
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Serviço 4: Mente em Paz -->
-      <section id="menteempaz" class="py-5 bg-light">
-        <div class="container py-5">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-5">
-              <h3 class="fw-bold mb-3">Mente em Paz</h3>
-              <p class="lead text-warning">Técnicas para Vencer a Ansiedade</p>
-              
-              <p class="mb-4">Se sua mente é um campo de batalha onde pensamentos catastróficos se enfrentam, este percurso oferece as armas para restaurar a paz. Para quem:</p>
-              
-              <ul class="mb-4">
-                <li>Acorda no meio da noite com preocupações que não consegue controlar</li>
-                <li>Evita situações cotidianas por medo de ter crises de ansiedade</li>
-                <li>Sente palpitações, tremores ou falta de ar sem causa médica aparente</li>
-              </ul>
-              
-              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#menteempazDetails">
-                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-              </button>
-              
-              <div class="collapse" id="menteempazDetails">
-                <div class="pt-3">
-                  <h5 class="mb-3">Estratégias de enfrentamento:</h5>
-                  <ul class="mb-4">
-                    <li><strong>Identificação de padrões ansiosos:</strong> Mapeie os gatilhos específicos que disparam sua ansiedade</li>
-                    <li><strong>Técnicas de grounding imediato:</strong> Aprenda métodos práticos para interromper crises no momento em que começam</li>
-                    <li><strong>Reestruturação do diálogo interno:</strong> Transforme o modo como você conversa consigo mesmo</li>
-                  </ul>
-                  
-                  <h5 class="mb-3">Abordagens comprovadas:</h5>
-                  <ul class="mb-4">
-                    <li>Terapia Cognitivo-Comportamental para Ansiedade (TCC-A)</li>
-                    <li>Técnicas de Terceira Onda (ACT e DBT) adaptadas para contextos de stress</li>
-                    <li>Psicoeducação sobre o sistema nervoso e respostas ao stress</li>
-                  </ul>
-                  
-                  <h5 class="mb-3">Benefícios alcançados:</h5>
-                  <ul>
-                    <li>Redução significativa da frequência e intensidade das crises</li>
-                    <li>Maior sensação de controle sobre pensamentos e reações físicas</li>
-                    <li>Capacidade de enfrentar situações antes evitadas</li>
-                  </ul>
+              <div class="accordion" id="accordionPequenos">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePequenos">
+                      <i class="bi bi-info-circle me-2 text-warning"></i> Detalhes completos
+                    </button>
+                  </h2>
+                  <div id="collapsePequenos" class="accordion-collapse collapse" data-bs-parent="#accordionPequenos">
+                    <div class="accordion-body pt-4">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Como ajudamos:</h6>
+                          <ul>
+                            <li>Expressão através de jogos e brincadeiras</li>
+                            <li>Desenvolvimento de vocabulário emocional</li>
+                            <li>Técnicas de regulação adaptadas</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Para os pais:</h6>
+                          <ul>
+                            <li>Orientação mensal personalizada</li>
+                            <li>Estratégias para lidar com crises</li>
+                            <li>Comunicação mais eficaz</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="text-center mt-4">
+                <a href="agendamento.html" class="btn btn-primary px-4">
+                  <i class="bi bi-calendar-check me-2"></i>Agendar Este Serviço
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Serviço 5: Fala que Transforma -->
-      <section id="falaquetransforma" class="py-5">
-        <div class="container py-5">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-5">
-              <h3 class="fw-bold mb-3">Fala que Transforma</h3>
-              <p class="lead text-warning">Comunicação Empática e Eficaz</p>
-              
-              <p class="mb-4">Se suas conversas frequentemente viram conflitos ou se você engole o que sente para evitar discussões, este treinamento é para você. Ideal para quem:</p>
-              
-              <ul class="mb-4">
-                <li>Sente que não é ouvido ou compreendido</li>
-                <li>Evita falar o que pensa por medo de reações</li>
-                <li>Se arrepende frequentemente do modo como se expressou</li>
-              </ul>
-              
-              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#falaquetransformaDetails">
-                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-              </button>
-              
-              <div class="collapse" id="falaquetransformaDetails">
-                <div class="pt-3">
-                  <h5 class="mb-3">O que você vai dominar:</h5>
+        </section>
+        
+        <!-- Serviço 3: Reencontra-te -->
+        <section id="reencontrate" class="mb-5" data-aos="fade-up">
+          <div class="service-card-premium service-3">
+            <div class="card-header">
+              <h3 class="fw-bold text-white">Reencontra-te</h3>
+              <p class="text-white-50 mb-0">Autoestima e Identidade com Propósito</p>
+            </div>
+            <div class="card-body p-4 p-lg-5">
+              <div class="service-icon-premium">
+                <i class="bi bi-search-heart fs-3 text-warning"></i>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Para quem é indicado:</h5>
                   <ul class="mb-4">
-                    <li><strong>Comunicação não-violenta:</strong> Aprenda a expressar necessidades sem culpar ou criticar</li>
-                    <li><strong>Escuta ativa profunda:</strong> Desenvolva a capacidade de ouvir verdadeiramente</li>
-                    <li><strong>Assertividade culturalmente adaptada:</strong> Encontre o equilíbrio entre passividade e agressividade</li>
+                    <li>Sensação de perda de conexão consigo mesmo</li>
+                    <li>Dificuldade em reconhecer seu próprio valor</li>
+                    <li>Tendência a agradar os outros em excesso</li>
                   </ul>
-                  
-                  <h5 class="mb-3">Metodologia prática:</h5>
+                </div>
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Benefícios:</h5>
                   <ul class="mb-4">
-                    <li>Role-playing de situações reais do seu cotidiano</li>
-                    <li>Análise de padrões comunicativos familiares herdados</li>
-                    <li>Técnicas de reformulação linguística para mensagens difíceis</li>
+                    <li>Clareza sobre identidade e valores</li>
+                    <li>Decisões mais alinhadas com suas necessidades</li>
+                    <li>Relacionamentos mais autênticos</li>
                   </ul>
-                  
-                  <h5 class="mb-3">Impacto nos relacionamentos:</h5>
-                  <ul>
+                </div>
+              </div>
+              <div class="accordion" id="accordionReencontrate">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReencontrate">
+                      <i class="bi bi-info-circle me-2 text-warning"></i> Detalhes completos
+                    </button>
+                  </h2>
+                  <div id="collapseReencontrate" class="accordion-collapse collapse" data-bs-parent="#accordionReencontrate">
+                    <div class="accordion-body pt-4">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">O processo inclui:</h6>
+                          <ul>
+                            <li>Exploração de valores essenciais</li>
+                            <li>Reconexão com necessidades negligenciadas</li>
+                            <li>Desconstrução de máscaras sociais</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Técnicas utilizadas:</h6>
+                          <ul>
+                            <li>Terapia do Esquema</li>
+                            <li>Psicologia Positiva</li>
+                            <li>Constelação Sistêmica Individual</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <a href="agendamento.html" class="btn btn-primary px-4">
+                  <i class="bi bi-calendar-check me-2"></i>Agendar Este Serviço
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Serviço 4: Mente em Paz -->
+        <section id="menteempaz" class="mb-5" data-aos="fade-up">
+          <div class="service-card-premium service-4">
+            <div class="card-header">
+              <h3 class="fw-bold text-white">Mente em Paz</h3>
+              <p class="text-white-50 mb-0">Técnicas para Vencer a Ansiedade</p>
+            </div>
+            <div class="card-body p-4 p-lg-5">
+              <div class="service-icon-premium">
+                <i class="bi bi-cloud-sun fs-3 text-warning"></i>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Para quem é indicado:</h5>
+                  <ul class="mb-4">
+                    <li>Preocupações constantes e incontroláveis</li>
+                    <li>Evitação de situações por medo de crises</li>
+                    <li>Sintomas físicos sem causa médica aparente</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Benefícios:</h5>
+                  <ul class="mb-4">
+                    <li>Redução da frequência e intensidade das crises</li>
+                    <li>Maior sensação de controle</li>
+                    <li>Capacidade de enfrentar situações evitadas</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion" id="accordionMente">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMente">
+                      <i class="bi bi-info-circle me-2 text-warning"></i> Detalhes completos
+                    </button>
+                  </h2>
+                  <div id="collapseMente" class="accordion-collapse collapse" data-bs-parent="#accordionMente">
+                    <div class="accordion-body pt-4">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Estratégias:</h6>
+                          <ul>
+                            <li>Identificação de padrões ansiosos</li>
+                            <li>Técnicas de grounding imediato</li>
+                            <li>Reestruturação do diálogo interno</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Abordagens:</h6>
+                          <ul>
+                            <li>Terapia Cognitivo-Comportamental</li>
+                            <li>ACT e DBT adaptadas</li>
+                            <li>Psicoeducação sobre stress</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <a href="agendamento.html" class="btn btn-primary px-4">
+                  <i class="bi bi-calendar-check me-2"></i>Agendar Este Serviço
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Serviço 5: Fala que Transforma -->
+        <section id="falaquetransforma" class="mb-5" data-aos="fade-up">
+          <div class="service-card-premium service-5">
+            <div class="card-header">
+              <h3 class="fw-bold text-white">Fala que Transforma</h3>
+              <p class="text-white-50 mb-0">Comunicação Empática e Eficaz</p>
+            </div>
+            <div class="card-body p-4 p-lg-5">
+              <div class="service-icon-premium">
+                <i class="bi bi-chat-square-text fs-3 text-warning"></i>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Para quem é indicado:</h5>
+                  <ul class="mb-4">
+                    <li>Sensação de não ser ouvido ou compreendido</li>
+                    <li>Dificuldade em expressar pensamentos e sentimentos</li>
+                    <li>Conflitos frequentes em relacionamentos</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Benefícios:</h5>
+                  <ul class="mb-4">
                     <li>Conversas mais autênticas e menos defensivas</li>
-                    <li>Capacidade de resolver conflitos sem danificar vínculos</li>
+                    <li>Resolução de conflitos sem danificar vínculos</li>
                     <li>Expressão clara de limites e necessidades</li>
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Serviço 6: Limites que Libertam -->
-      <section id="limitesquelibertam" class="py-5 bg-light">
-        <div class="container py-5">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-5">
-              <h3 class="fw-bold mb-3">Limites que Libertam</h3>
-              <p class="lead text-warning">Assertividade com Respeito e Clareza</p>
-              
-              <p class="mb-4">Dizer "não" sem culpa é uma habilidade que poucos dominam. Se você se sente sobrecarregado por assumir responsabilidades que não são suas, este percurso ensina:</p>
-              
-              <ul class="mb-4">
-                <li>A diferença entre egoísmo e auto-preservação saudável</li>
-                <li>Técnicas para estabelecer limites sem destruir relacionamentos</li>
-                <li>Como lidar com a culpa que surge quando você prioriza suas necessidades</li>
-              </ul>
-              
-              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#limitesquelibertamDetails">
-                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-              </button>
-              
-              <div class="collapse" id="limitesquelibertamDetails">
-                <div class="pt-3">
-                  <h5 class="mb-3">Conteúdo detalhado:</h5>
-                  <ul class="mb-4">
-                    <li><strong>Diagnóstico de limites pessoais:</strong> Identifique áreas específicas da sua vida onde seus limites estão sendo violados</li>
-                    <li><strong>Origens culturais e familiares:</strong> Explore como sua criação influenciou sua dificuldade com limites</li>
-                    <li><strong>Hierarquia de valores pessoais:</strong> Estabeleça quais princípios são inegociáveis para você</li>
-                  </ul>
-                  
-                  <h5 class="mb-3">Abordagens terapêuticas:</h5>
-                  <ul class="mb-4">
-                    <li>Terapia dos Esquemas para identificar padrões de submissão</li>
-                    <li>Técnicas de Role-playing para treinar situações desafiadoras</li>
-                    <li>Análise transacional para entender dinâmicas de poder</li>
-                  </ul>
-                  
-                  <h5 class="mb-3">Resultados esperados:</h5>
-                  <ul>
-                    <li>Maior sensação de controle sobre seu tempo e energia</li>
-                    <li>Relacionamentos mais equilibrados e menos desgastantes</li>
-                    <li>Redução significativa de ressentimentos acumulados</li>
-                  </ul>
+              <div class="accordion" id="accordionFala">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFala">
+                      <i class="bi bi-info-circle me-2 text-warning"></i> Detalhes completos
+                    </button>
+                  </h2>
+                  <div id="collapseFala" class="accordion-collapse collapse" data-bs-parent="#accordionFala">
+                    <div class="accordion-body pt-4">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Habilidades desenvolvidas:</h6>
+                          <ul>
+                            <li>Comunicação não-violenta</li>
+                            <li>Escuta ativa profunda</li>
+                            <li>Assertividade culturalmente adaptada</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Metodologia:</h6>
+                          <ul>
+                            <li>Role-playing de situações reais</li>
+                            <li>Análise de padrões comunicativos</li>
+                            <li>Reformulação linguística</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="text-center mt-4">
+                <a href="agendamento.html" class="btn btn-primary px-4">
+                  <i class="bi bi-calendar-check me-2"></i>Agendar Este Serviço
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Serviço 7: Viver Depois da Perda -->
-      <section id="viverdepoisdaperda" class="py-5">
-        <div class="container py-5">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-5">
-              <h3 class="fw-bold mb-3">Viver Depois da Perda</h3>
-              <p class="lead text-warning">Cuidando do Luto e dos Recomeços</p>
-              
-              <p class="mb-4">O luto não é apenas sobre a morte - é sobre qualquer perda significativa: relacionamentos, saúde, empregos, sonhos. Este espaço é para quem:</p>
-              
-              <ul class="mb-4">
-                <li>Sente que o mundo seguiu em frente enquanto você ficou parado no tempo</li>
-                <li>Tem medo de "superar" porque acha que isso significa esquecer</li>
-                <li>Experimenta ondas de saudade que parecem insuportáveis</li>
-              </ul>
-              
-              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#viverdepoisdaperdaDetails">
-                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-              </button>
-              
-              <div class="collapse" id="viverdepoisdaperdaDetails">
-                <div class="pt-3">
-                  <h5 class="mb-3">O processo de cura:</h5>
+        </section>
+        
+        <!-- Serviço 6: Limites que Libertam -->
+        <section id="limitesquelibertam" class="mb-5" data-aos="fade-up">
+          <div class="service-card-premium service-6">
+            <div class="card-header">
+              <h3 class="fw-bold text-white">Limites que Libertam</h3>
+              <p class="text-white-50 mb-0">Assertividade com Respeito e Clareza</p>
+            </div>
+            <div class="card-body p-4 p-lg-5">
+              <div class="service-icon-premium">
+                <i class="bi bi-shield-check fs-3 text-warning"></i>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Para quem é indicado:</h5>
                   <ul class="mb-4">
-                    <li><strong>Validação da dor:</strong> Um espaço seguro para expressar sua saudade sem julgamentos</li>
-                    <li><strong>Reconexão com o que foi perdido:</strong> Ritualização e métodos simbólicos para manter uma conexão saudável</li>
-                    <li><strong>Reconstrução identitária:</strong> Quem você é depois dessa perda? Como integrar essa experiência à sua história</li>
+                    <li>Dificuldade em dizer "não" sem culpa</li>
+                    <li>Sensação de sobrecarga por responsabilidades alheias</li>
+                    <li>Relacionamentos desequilibrados e desgastantes</li>
                   </ul>
-                  
-                  <h5 class="mb-3">Abordagens sensíveis:</h5>
+                </div>
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Benefícios:</h5>
                   <ul class="mb-4">
-                    <li>Terapia do Luto com abordagem em Tarefas de William Worden</li>
-                    <li>Técnicas narrativas para reconstrução de significado</li>
-                    <li>Intervenções baseadas em Mindfulness para lidar com ondas de dor</li>
+                    <li>Maior controle sobre tempo e energia</li>
+                    <li>Relacionamentos mais equilibrados</li>
+                    <li>Redução de ressentimentos acumulados</li>
                   </ul>
-                  
-                  <h5 class="mb-3">Caminhos possíveis:</h5>
-                  <ul>
-                    <li>Aprender a carregar a saudade sem que ela te paralise</li>
+                </div>
+              </div>
+              <div class="accordion" id="accordionLimites">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLimites">
+                      <i class="bi bi-info-circle me-2 text-warning"></i> Detalhes completos
+                    </button>
+                  </h2>
+                  <div id="collapseLimites" class="accordion-collapse collapse" data-bs-parent="#accordionLimites">
+                    <div class="accordion-body pt-4">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Conteúdo detalhado:</h6>
+                          <ul>
+                            <li>Diagnóstico de limites pessoais</li>
+                            <li>Origens culturais e familiares</li>
+                            <li>Hierarquia de valores pessoais</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Abordagens:</h6>
+                          <ul>
+                            <li>Terapia dos Esquemas</li>
+                            <li>Role-playing situacional</li>
+                            <li>Análise transacional</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <a href="agendamento.html" class="btn btn-primary px-4">
+                  <i class="bi bi-calendar-check me-2"></i>Agendar Este Serviço
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Serviço 7: Viver Depois da Perda -->
+        <section id="viverdepoisdaperda" class="mb-5" data-aos="fade-up">
+          <div class="service-card-premium service-7">
+            <div class="card-header">
+              <h3 class="fw-bold text-white">Viver Depois da Perda</h3>
+              <p class="text-white-50 mb-0">Cuidando do Luto e dos Recomeços</p>
+            </div>
+            <div class="card-body p-4 p-lg-5">
+              <div class="service-icon-premium">
+                <i class="bi bi-symmetry-vertical fs-3 text-warning"></i>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Para quem é indicado:</h5>
+                  <ul class="mb-4">
+                    <li>Perda de entes queridos, relacionamentos ou sonhos</li>
+                    <li>Sensação de que o mundo seguiu em frente sem você</li>
+                    <li>Ondas de saudade que parecem insuportáveis</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Benefícios:</h5>
+                  <ul class="mb-4">
+                    <li>Aprender a carregar a saudade sem paralisia</li>
                     <li>Redescobrir alegrias sem culpa</li>
-                    <li>Honrar a memória enquanto se permite viver o presente</li>
+                    <li>Honrar a memória enquanto vive o presente</li>
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Serviço 8: Presença que Cura -->
-      <section id="presencaquecura" class="py-5 bg-light">
-        <div class="container py-5">
-          <div class="card border-0 shadow-sm">
-            <div class="card-body p-5">
-              <h3 class="fw-bold mb-3">Presença que Cura</h3>
-              <p class="lead text-warning">Escuta Ativa e Diálogo Consciente</p>
-              
-              <p class="mb-4">Para profissionais de ajuda (médicos, professores, líderes) e cuidadores familiares que desejam transformar sua presença em instrumento de cura. Ideal para:</p>
-              
-              <ul class="mb-4">
-                <li>Profissionais de saúde que querem ir além do tratamento técnico</li>
-                <li>Professores que lidam com alunos em sofrimento emocional</li>
-                <li>Líderes que desejam criar ambientes psicologicamente seguros</li>
-              </ul>
-              
-              <button class="btn btn-link text-warning p-0 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#presencaquecuraDetails">
-                Mostrar tudo sobre este treinamento <i class="bi bi-arrow-down"></i>
-              </button>
-              
-              <div class="collapse" id="presencaquecuraDetails">
-                <div class="pt-3">
-                  <h5 class="mb-3">Habilidades desenvolvidas:</h5>
-                  <ul class="mb-4">
-                    <li><strong>Escuta terapêutica básica:</strong> Técnicas para ouvir além das palavras</li>
-                    <li><strong>Comunicação não-verbal curativa:</strong> Como seu corpo e tom de voz podem transmitir segurança</li>
-                    <li><strong>Contenção emocional:</strong> Manter-se centrado ao lidar com a dor alheia</li>
-                  </ul>
-                  
-                  <h5 class="mb-3">Metodologia prática:</h5>
-                  <ul class="mb-4">
-                    <li>Exercícios de calibração emocional para reconhecer estados internos alheios</li>
-                    <li>Simulações de situações desafiadoras com feedback personalizado</li>
-                    <li>Técnicas de regulação emocional para o cuidador evitar burnout</li>
-                  </ul>
-                  
-                  <h5 class="mb-3">Impacto profissional e pessoal:</h5>
-                  <ul>
-                    <li>Melhora na qualidade das interações profissionais</li>
-                    <li>Prevenção do esgotamento emocional do cuidador</li>
-                    <li>Habilidade de criar espaços seguros para expressão emocional</li>
-                  </ul>
+              <div class="accordion" id="accordionPerda">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePerda">
+                      <i class="bi bi-info-circle me-2 text-warning"></i> Detalhes completos
+                    </button>
+                  </h2>
+                  <div id="collapsePerda" class="accordion-collapse collapse" data-bs-parent="#accordionPerda">
+                    <div class="accordion-body pt-4">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Processo de cura:</h6>
+                          <ul>
+                            <li>Validação da dor em espaço seguro</li>
+                            <li>Reconexão simbólica com o que foi perdido</li>
+                            <li>Reconstrução identitária pós-perda</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Abordagens:</h6>
+                          <ul>
+                            <li>Terapia do Luto (William Worden)</li>
+                            <li>Técnicas narrativas de reconstrução</li>
+                            <li>Mindfulness para lidar com a dor</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA Final -->
-      <section class="py-5 bg-warning bg-opacity-10">
-        <div class="container py-5 text-center">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <h2 class="display-5 fw-bold mb-4">Reconheceu sua história em algum desses percursos?</h2>
-              <p class="lead mb-5">A mudança começa quando você decide dar o primeiro passo</p>
-              <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                <a href="agendamento.html" class="btn btn-warning btn-lg px-4 py-3 fw-bold">
-                  <i class="bi bi-calendar-check-fill me-2"></i> Agendar Consulta
-                </a>
-                <a href="contato.html" class="btn btn-outline-dark btn-lg px-4 py-3 fw-bold">
-                  <i class="bi bi-chat-left-text me-2"></i> Falar com Especialista
+              <div class="text-center mt-4">
+                <a href="agendamento.html" class="btn btn-primary px-4">
+                  <i class="bi bi-calendar-check me-2"></i>Agendar Este Serviço
                 </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+        
+        <!-- Serviço 8: Presença que Cura -->
+        <section id="presencaquecura" class="mb-5" data-aos="fade-up">
+          <div class="service-card-premium service-8">
+            <div class="card-header">
+              <h3 class="fw-bold text-white">Presença que Cura</h3>
+              <p class="text-white-50 mb-0">Escuta Ativa e Diálogo Consciente</p>
+            </div>
+            <div class="card-body p-4 p-lg-5">
+              <div class="service-icon-premium">
+                <i class="bi bi-ear fs-3 text-warning"></i>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Para quem é indicado:</h5>
+                  <ul class="mb-4">
+                    <li>Profissionais de saúde e educação</li>
+                    <li>Líderes que buscam ambientes psicologicamente seguros</li>
+                    <li>Cuidadores familiares</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Benefícios:</h5>
+                  <ul class="mb-4">
+                    <li>Melhora na qualidade das interações</li>
+                    <li>Prevenção do esgotamento emocional</li>
+                    <li>Criação de espaços seguros para diálogo</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion" id="accordionPresenca">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePresenca">
+                      <i class="bi bi-info-circle me-2 text-warning"></i> Detalhes completos
+                    </button>
+                  </h2>
+                  <div id="collapsePresenca" class="accordion-collapse collapse" data-bs-parent="#accordionPresenca">
+                    <div class="accordion-body pt-4">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Habilidades desenvolvidas:</h6>
+                          <ul>
+                            <li>Escuta terapêutica básica</li>
+                            <li>Comunicação não-verbal curativa</li>
+                            <li>Contenção emocional</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <h6 class="fw-bold">Metodologia:</h6>
+                          <ul>
+                            <li>Exercícios de calibração emocional</li>
+                            <li>Simulações com feedback personalizado</li>
+                            <li>Técnicas de regulação para cuidadores</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center mt-4">
+                <a href="agendamento.html" class="btn btn-primary px-4">
+                  <i class="bi bi-calendar-check me-2"></i>Agendar Este Serviço
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- FAQ -->
+        <section class="mb-5" data-aos="fade-up">
+          <div class="card border-0 bg-light hover-card">
+            <div class="card-body p-4 p-lg-5">
+              <h3 class="fw-bold mb-4 text-center">Perguntas Frequentes</h3>
+              
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>Como sei qual serviço é ideal para mim?</span>
+                  <i class="bi bi-chevron-down faq-toggle"></i>
+                </div>
+                <div class="faq-content">
+                  <p class="pt-3">Oferecemos uma sessão inicial onde avaliamos suas necessidades e recomendamos o serviço mais adequado. Muitos pacientes combinam elementos de diferentes serviços para um plano personalizado.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>Qual a duração média de cada serviço?</span>
+                  <i class="bi bi-chevron-down faq-toggle"></i>
+                </div>
+                <div class="faq-content">
+                  <p class="pt-3">A duração varia conforme a necessidade de cada pessoa. Em média, os percursos terapêuticos são feitos em sessões semanais ou quinzenais.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>Os serviços são presenciais ou online?</span>
+                  <i class="bi bi-chevron-down faq-toggle"></i>
+                </div>
+                <div class="faq-content">
+                  <p class="pt-3">Oferecemos ambas as modalidades. As sessões online são realizadas por plataformas seguras para quem está em outras regiões.</p>
+                </div>
+              </div>
+              
+              <div class="faq-item">
+                <div class="faq-header">
+                  <span>Há algum material de apoio incluído?</span>
+                  <i class="bi bi-chevron-down faq-toggle"></i>
+                </div>
+                <div class="faq-content">
+                  <p class="pt-3">Sim, todos os serviços incluem materiais de apoio personalizados, como guias práticos, exercícios, etc</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- CTA Final -->
+        <section class="mb-5" data-aos="fade-up">
+          <div class="card border-0 bg-warning hover-card">
+            <div class="card-body p-4 p-lg-5 text-center">
+              <h3 class="fw-bold mb-3">Pronto para transformar sua vida emocional?</h3>
+              <p class="lead mb-4">Agende uma conversa inicial sem compromisso para descobrir como podemos ajudar.</p>
+              <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
+                <a href="agendamento.html" class="btn btn-dark px-4 py-3">
+                  <i class="bi bi-calendar-check-fill me-2"></i>Agendar Consulta
+                </a>
+                <a href="contato.html" class="btn btn-outline-dark px-4 py-3">
+                  <i class="bi bi-chat-left-text me-2"></i>Falar com Especialista
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
-</main>
+  </main>
 
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <img src="assets/img/logo-vida-promovida.png" alt="Vida Promovida" height="40" class="mb-3">
+          <p class="text-white-50">
+            Cuidado emocional com acolhimento e dignidade em Angola.
+          </p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#" class="text-white-50"><i class="bi bi-facebook fs-5"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+            <a href="#" class="text-white-50"><i class="bi bi-whatsapp fs-5"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-md-2 mb-4">
+          <h5 class="text-warning mb-4">Navegação</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Início</a></li>
+            <li class="mb-2"><a href="servicos.html" class="text-white-50 text-decoration-none">Serviços</a></li>
+            <li class="mb-2"><a href="sobre.html" class="text-white-50 text-decoration-none">Sobre Nós</a></li>
+            <li class="mb-2"><a href="contato.html" class="text-white-50 text-decoration-none">Contato</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-3 mb-4">
+          <h5 class="text-warning mb-4">Contato</h5>
+          <ul class="list-unstyled text-white-50">
+            <li class="mb-3"><i class="bi bi-envelope-fill text-warning me-2"></i> vidapromovida@gmail.com</li>
+            <li class="mb-3"><i class="bi bi-telephone-fill text-warning me-2"></i> +244 933 788 770</li>
+            <li class="mb-3"><i class="bi bi-geo-alt-fill text-warning me-2"></i> Luanda, Angola</li>
+          </ul>
+        </div>
+        
+        <div class="col-md-3 mb-4">
+          <h5 class="text-warning mb-4">Horário</h5>
+          <ul class="list-unstyled text-white-50">
+            <li class="mb-2">Segunda a Sexta: 8h - 20h</li>
+            <li class="mb-2">Sábado: 9h - 20h</li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr class="my-4 border-secondary">
+      
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0 text-white-50 small">&copy; 2025 Vida Promovida. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Get all sections that have an ID
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('#services-nav .nav-link');
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script>
+    // Inicializa AOS (Animações)
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out-quad',
+      once: true
+    });
     
-    // Function to determine which section is in view
-    function changeActiveLink() {
-      let index = sections.length;
-      
-      // Scroll to bottom of page case
-      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-        index = sections.length - 1;
-      } else {
-        // Check from top to bottom to find the section in view
-        while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
-      }
-      
-      // Remove active class from all links
-      navLinks.forEach(link => link.classList.remove('active'));
-      
-      // Add active class to corresponding link
-      if (sections[index]) {
-        const activeLink = document.querySelector(`#services-nav .nav-link[href="#${sections[index].id}"]`);
-        if (activeLink) activeLink.classList.add('active');
-      }
-    }
+    // FAQ Accordion
+    document.querySelectorAll('.faq-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('active');
+      });
+    });
     
-    // Set up scroll event listener
-    window.addEventListener('scroll', changeActiveLink);
-    
-    // Initialize active link on page load
-    changeActiveLink();
-    
-    // Smooth scrolling for sidebar links
-    navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
+    // Navegação suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
         e.preventDefault();
         
         const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+        if (targetId === '#') return;
         
-        if (targetSection) {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
           window.scrollTo({
-            top: targetSection.offsetTop - 20,
+            top: targetElement.offsetTop - 100,
             behavior: 'smooth'
           });
           
-          // Update URL without reloading
+          // Atualiza a URL sem recarregar a página
           history.pushState(null, null, targetId);
         }
       });
     });
-
-    // Handle browser back/forward buttons
-    window.addEventListener('popstate', function() {
-      const hash = window.location.hash;
-      if (hash) {
-        const targetSection = document.querySelector(hash);
-        if (targetSection) {
-          window.scrollTo({
-            top: targetSection.offsetTop - 20,
-            behavior: 'smooth'
+    
+    // Ativar link ativo na navegação lateral
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY;
+      
+      document.querySelectorAll('section[id]').forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          const id = section.getAttribute('id');
+          document.querySelectorAll('.nav-service-item').forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${id}`) {
+              item.classList.add('active');
+            }
           });
         }
-      }
+      });
     });
-  });
-</script>
-
-
-
-
-
-<footer class="bg-dark text-white pt-5 pb-4 col-md-9 ms-sm-auto col-lg-10 px-md-4" style="background-color: #1A2B2F !important;">
-  <div class="container">
-    <div class="row">
-      
-      <!-- Chamada de Ação (CTA) -->
-      <div class="col-md-12 mb-5 text-center">
-        <div class="bg-light p-4 rounded-3 shadow" style="background-color: #FAFAFA !important;">
-          <h3 class="text-dark mb-3" style="color: #1A2B2F !important;">
-            <i class="bi bi-heart-fill text-danger me-2"></i> Não espere mais!
-          </h3>
-          <p class="lead text-dark mb-4" style="color: #1A2B2F !important;">
-            Nós podemos ajudar você. Agende uma sessão de terapia agora mesmo.
-          </p>
-          <a href="agendamento.html" 
-             class="btn btn-lg rounded-pill px-5 py-3 fw-bold shadow" 
-             style="background-color: #C9A44C; color: #1A2B2F;">
-            <i class="bi bi-calendar-check-fill me-2"></i> Agendar Sessão
-          </a>
+    
+    // Popup inteligente após 30 segundos
+    setTimeout(() => {
+      const popup = document.createElement('div');
+      popup.className = 'position-fixed bottom-0 end-0 m-3 p-3 bg-white rounded-3 shadow-lg';
+      popup.style.zIndex = '9999';
+      popup.style.maxWidth = '350px';
+      popup.innerHTML = `
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 class="mb-0 text-warning">Guia Gratuito</h5>
+          <button class="btn-close" onclick="this.parentElement.parentElement.remove()"></button>
         </div>
-      </div>
-
-      <!-- Coluna 1: Logo + Slogan -->
-      <div class="col-md-4 mb-4">
-        <img src="assets/img/logo-vida-promovida.png" alt="Vida Promovida" width="60" height="60" class="mb-3">
-        <p class="text-white-50">
-          Cuidado emocional com acolhimento e dignidade em Angola.
-        </p>
-        <div class="mt-4">
-          <a href="#" class="text-white-50 me-3" style="text-decoration: none;">
-            <i class="bi bi-shield-lock-fill me-2"></i> Política de Privacidade
-          </a>
-        </div>
-      </div>
-
-      <!-- Coluna 2: Links Rápidos -->
-      <div class="col-md-2 mb-4">
-        <h5 class="text-warning mb-4">Navegação</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="index.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Início</a></li>
-          <li class="mb-2"><a href="servicos.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Serviços</a></li>
-          <li class="mb-2"><a href="sobre.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Sobre Nós</a></li>
-          <li class="mb-2"><a href="contato.html" class="text-white-50" style="text-decoration: none;"><i class="bi bi-chevron-right me-1"></i> Contato</a></li>
-        </ul>
-      </div>
-
-      <!-- Coluna 3: Contatos -->
-      <div class="col-md-3 mb-4">
-        <h5 class="text-warning mb-4">Contacte-nos</h5>
-        <ul class="list-unstyled text-white-50">
-          <li class="mb-3"><i class="bi bi-envelope-fill me-2 text-warning"></i> vidapromovida@gmail.com</li>
-          <li class="mb-3"><i class="bi bi-telephone-fill me-2 text-warning"></i> +244 958 902 309</li>
-          <li class="mb-3"><i class="bi bi-geo-alt-fill me-2 text-warning"></i> Luanda, Angola</li>
-        </ul>
-      </div>
-
-      <!-- Coluna 4: Redes Sociais -->
-      <div class="col-md-3 mb-4">
-        <h5 class="text-warning mb-4">Siga-nos</h5>
-        <div class="d-flex">
-          <a href="https://facebook.com/vidapromovida" target="_blank" class="btn btn-outline-light rounded-circle me-2 social-icon">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="https://instagram.com/vidapromovida" target="_blank" class="btn btn-outline-light rounded-circle me-2 social-icon">
-            <i class="bi bi-instagram"></i>
-          </a>
-          <a href="https://wa.me/244958902309" target="_blank" class="btn btn-outline-light rounded-circle me-2 social-icon">
-            <i class="bi bi-whatsapp"></i>
-          </a>
-        </div>
-        
-        <!-- Horário -->
-        <div class="mt-4 text-white-50">
-          <h6 class="text-warning">Horário</h6>
-          <p class="mb-1">Seg-Sex: 8h00 - 18h00</p>
-          <p>Sábado: 9h00 - 13h00</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Copyright -->
-    <div class="row pt-3 border-top border-secondary">
-      <div class="col-md-12 text-center text-white-50">
-        <p class="mb-0">&copy; 2025 Vida Promovida. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </div>
-</footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function(){
-        AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true // Animação ocorre apenas uma vez
-    });
-    });
-</script>
-</body></html>
-
+        <p class="small">Baixe nosso guia "5 Sinais de que Você Precisa de Apoio Emocional"</p>
+        <form class="mt-3">
+          <a href="docs/5-sinais-de-que-voce-precisa-de-apoio-emocional.pdf" download><button type="button" class="btn btn-sm btn-warning w-100">Baixar Agora</button></a>
+        </form>
+      `;
+      document.body.appendChild(popup);
+    }, 30000);
+  </script>
+</body>
+</html>
